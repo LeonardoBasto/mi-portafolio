@@ -1,0 +1,22 @@
+# Sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editores
+.vscode/
+*.code-workspace
+
+# Secretos y configuración local (NUNCA subir)
+.env
+.env.*
+*.pem
+*.key
+
+# Dependencias y compilados (para cuando uses npm)
+node_modules/
+dist/
+build/
+
+# Logs
+*.log

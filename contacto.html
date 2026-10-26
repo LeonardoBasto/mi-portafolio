@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacto de Elkin Basto">
+  <title>Contacto | Elkin Basto</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="img/logo.svg" alt="" width="32" height="32">
+        <span>Elkin Basto</span>
+      </a>
+      <nav aria-label="Principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+      <h1>Contacto</h1>
+      <p class="lead">¿Tienes un proyecto o una pregunta? Escríbeme.</p>
+
+      <!-- Este formulario abre el cliente de correo. Más adelante lo conectaremos a un servicio real. -->
+      <form id="contact-form" class="form">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" required autocomplete="name">
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button class="btn" type="submit">Enviar</button>
+      </form>
+
+      <p class="muted">También puedes escribir a <a href="mailto:tu-correo@ejemplo.com">tu-correo@ejemplo.com</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Elkin Basto</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
