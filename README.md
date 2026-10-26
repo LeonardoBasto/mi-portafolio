@@ -11,7 +11,7 @@ mi-portafolio/
 ├── index.html      Página principal (una sola página con secciones)
 ├── contacto.html   Redirige a la sección de contacto
 ├── css/styles.css  Estilos: variables de color al inicio, modo claro y oscuro
-├── js/main.js      Diagrama de red, tema, menú móvil y formulario
+├── js/main.js      Diagrama de red, tema y menú móvil
 ├── img/logo.svg    Logo e ícono de la pestaña
 ├── README.md       Este archivo
 └── .gitignore      Archivos que Git no debe versionar
@@ -21,8 +21,8 @@ mi-portafolio/
 
 | Quiero cambiar... | Dónde |
 |---|---|
-| Mi correo | `js/main.js`, constante `EMAIL` al inicio |
-| Textos de secciones y proyectos | `index.html` |
+| Enlaces de contacto (LinkedIn, GitHub) | `index.html`, sección `contacto` |
+| Experiencia, proyectos, formación y textos | `index.html` |
 | Equipos del diagrama de red | `js/main.js`, arreglo `NODES` |
 | Colores | `css/styles.css`, bloque `:root` al inicio |
 

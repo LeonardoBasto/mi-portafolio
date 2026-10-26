@@ -477,6 +477,85 @@ ul.bento { padding-inline: 0; }
 .form-error { color: #C0392B; font-weight: 600; }
 :root[data-theme="dark"] .form-error { color: #FF8A7A; }
 
+
+/* ---------- Datos clave ---------- */
+.tile-stat .stat-num {
+  font-family: var(--font-head); font-weight: 800;
+  font-size: clamp(2.6rem, 4vw, 3.4rem); line-height: 1; letter-spacing: -0.05em;
+  color: var(--text) !important; margin-bottom: 14px;
+}
+.tile-stat .stat-num span { color: var(--accent); }
+
+/* ---------- Experiencia: línea de tiempo ---------- */
+.timeline {
+  position: relative;
+  list-style: none; margin: 0; padding: 0 0 0 36px;
+  display: grid; gap: var(--gap);
+}
+.timeline::before {
+  /* la línea vertical */
+  content: ""; position: absolute; left: 11px; top: 12px; bottom: 12px;
+  width: 2px; border-radius: 2px;
+  background: linear-gradient(var(--accent), var(--border) 40%);
+}
+.job::before {
+  /* el punto de cada cargo sobre la línea */
+  content: ""; position: absolute; left: -32px; top: 32px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--card); border: 3px solid var(--border);
+}
+.job-current::before { border-color: var(--accent); background: var(--accent); box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 22%, transparent); }
+.job-current { border-color: color-mix(in srgb, var(--accent) 55%, var(--border)); }
+
+.job-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 8px; }
+.job-date { font-weight: 600; font-size: .9rem; color: var(--accent-text); }
+.job-now {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 3px 10px; border-radius: 999px;
+  background: color-mix(in srgb, var(--ok) 12%, transparent);
+  color: var(--ok); font-size: .78rem; font-weight: 700;
+}
+.job h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
+.job-org { margin-top: 4px; font-weight: 500; }
+.job-list { margin: 14px 0 0; padding-left: 20px; display: grid; gap: 6px; max-width: 80ch; }
+.job-list li { color: var(--muted); }
+.job-list li::marker { color: var(--accent); }
+
+/* ---------- Formación, herramientas y habilidades ---------- */
+.tile-edu { grid-column: span 5; }
+.tile-tools { grid-column: span 7; }
+.tile-skills { grid-column: span 12; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
+
+.edu-list { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 4px; }
+.edu-list li { display: grid; gap: 2px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+.edu-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.edu-list strong { font-weight: 600; }
+.edu-list span { color: var(--muted); font-size: .92rem; }
+
+.tool-groups { margin: 4px 0 0; display: grid; gap: 14px; }
+.tool-groups > div { display: grid; grid-template-columns: 150px 1fr; gap: 12px; align-items: start; }
+.tool-groups dt { font-weight: 600; font-size: .92rem; padding-top: 4px; }
+.tool-groups dd { margin: 0; }
+.tool-groups .tags { margin: 0; }
+
+.skill-list { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 0; padding: 0; }
+.skill-list li {
+  padding: 8px 16px; border-radius: 999px;
+  background: var(--control);
+  box-shadow: 3px 3px 8px var(--lo), -3px -3px 8px var(--hi);
+  font-weight: 500; font-size: .95rem;
+}
+
+/* ---------- Contacto en un solo bloque ---------- */
+.tile-contact {
+  display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 28px;
+  padding: clamp(28px, 4.5vw, 56px);
+}
+.tile-contact .contact-links { margin-top: 0; }
+.tile-ink .pill-btn-primary { background: var(--grad); color: var(--on-accent); box-shadow: var(--glow); }
+.tile-ink .pill-btn-primary:hover { color: var(--on-accent); }
+.tile-ink .pill-btn-primary .pill-ico { color: var(--on-accent); border-right-color: rgba(21,24,28,.22); }
+
 /* ---------- 9. Pie ---------- */
 .site-footer { color: var(--muted); font-size: .9rem; }
 .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-block: 8px 40px; }
@@ -491,6 +570,7 @@ ul.bento { padding-inline: 0; }
   .bento-projects .project { grid-column: span 6; }
   .bento-3 .tile { grid-column: span 12; }
   .bento-contact .tile-ink, .bento-contact .form { grid-column: span 12; }
+  .tile-edu, .tile-tools { grid-column: span 12; }
 }
 
 @media (max-width: 860px) {
@@ -543,6 +623,10 @@ ul.bento { padding-inline: 0; }
   .node-short { display: inline; }
 
   .project-featured .tile-head { margin-top: 22px; }
+  .timeline { padding-left: 26px; }
+  .timeline::before { left: 6px; }
+  .job::before { left: -27px; }
+  .tool-groups > div { grid-template-columns: 1fr; gap: 6px; }
   .ticket { grid-template-columns: 1fr auto; }
   .ticket-id { display: none; }
 }

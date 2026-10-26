@@ -3,12 +3,6 @@
    ========================================================= */
 
 // ---------------------------------------------------------
-// CONFIGURACIÓN: cambia aquí tu correo y se actualiza en todo el sitio
-// ---------------------------------------------------------
-const EMAIL = 'tu-correo@ejemplo.com';
-
-
-// ---------------------------------------------------------
 // 1. Diagrama de red interactivo
 // ---------------------------------------------------------
 // Cada equipo tiene: posición (x, y) dentro de un lienzo de 100 x 62,
@@ -17,43 +11,43 @@ const NODES = [
   {
     id: 'internet', label: 'Internet', short: 'Internet', icon: 'globe', x: 22, y: 8, parent: null,
     title: 'Internet y proveedor',
-    text: 'Enlaces dedicados con el proveedor, redundancia y seguimiento de la disponibilidad del canal.',
+    text: 'Enlaces dedicados con el proveedor, redes WAN y seguimiento de la disponibilidad del canal.',
     layer: 'capa-red'
   },
   {
     id: 'm365', label: 'Microsoft 365', short: 'M365', icon: 'cloud', x: 76, y: 8, parent: 'internet',
     title: 'Microsoft 365',
-    text: 'Correo, Teams y SharePoint para toda la empresa: cuentas, licencias, seguridad y automatizaciones con Power Platform.',
+    text: 'Microsoft 365 y Active Directory: cuentas, licencias, accesos y permisos para toda la empresa.',
     layer: 'capa-nube'
   },
   {
     id: 'firewall', label: 'Firewall Fortinet', short: 'Firewall', icon: 'shield', x: 25, y: 22, parent: 'internet',
     title: 'Firewall y perímetro',
-    text: 'Reglas de seguridad, VPN para trabajo remoto y filtrado del tráfico que entra y sale de la red.',
+    text: 'Firewalls Fortinet: reglas de seguridad, VPN para trabajo remoto y filtrado del tráfico de la red.',
     layer: 'capa-red'
   },
   {
     id: 'switch', label: 'Switch núcleo', short: 'Switch', icon: 'switch', x: 50, y: 35, parent: 'firewall',
     title: 'Red interna',
-    text: 'El centro de la red local: segmentación por VLAN para separar oficinas, servidores, telefonía y cámaras.',
+    text: 'El centro de la red local, con equipos Cisco y Aruba: segmentación por VLAN para separar oficinas, servidores, telefonía y cámaras.',
     layer: 'capa-red'
   },
   {
     id: 'servers', label: 'Servidores', short: 'Servidores', icon: 'server', x: 13, y: 47, parent: 'switch',
-    title: 'Servidores y virtualización',
-    text: 'Windows Server, directorio de usuarios, máquinas virtuales y respaldos de la información crítica.',
+    title: 'Servidores y contenedores',
+    text: 'Windows Server y Linux, servidores de archivos, infraestructura virtual y servicios en Docker.',
     layer: 'capa-servidores'
   },
   {
     id: 'voip', label: 'Telefonía IP', short: 'Telefonía', icon: 'phone', x: 36, y: 55, parent: 'switch',
     title: 'Telefonía IP',
     text: 'Extensiones, troncales y equipos telefónicos para que cada sede se comunique sin depender de líneas tradicionales.',
-    layer: 'capa-comunicaciones'
+    layer: 'capa-red'
   },
   {
     id: 'cctv', label: 'CCTV', short: 'CCTV', icon: 'camera', x: 62, y: 55, parent: 'switch',
     title: 'Videovigilancia',
-    text: 'Cámaras y grabadores Hikvision: instalación, almacenamiento de video y monitoreo desde iVMS-4200.',
+    text: 'Cámaras y grabadores Hikvision, Vivotek y Bosch: instalación, almacenamiento de video y monitoreo.',
     layer: 'capa-fisica'
   },
   {
@@ -215,40 +209,7 @@ if (navToggle && nav) {
 
 
 // ---------------------------------------------------------
-// 5. Correo y formulario de contacto
-// ---------------------------------------------------------
-document.querySelectorAll('.js-email').forEach((a) => { a.href = 'mailto:' + EMAIL; });
-document.querySelectorAll('.js-email-label').forEach((el) => { el.textContent = EMAIL; });
-
-const form = document.getElementById('contact-form');
-const formError = document.getElementById('form-error');
-
-if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const nombre = form.nombre.value.trim();
-    const empresa = form.empresa.value.trim();
-    const mensaje = form.mensaje.value.trim();
-
-    if (!nombre || !mensaje) {
-      formError.textContent = 'Escribe tu nombre y el mensaje para poder enviarlo.';
-      formError.hidden = false;
-      (nombre ? form.mensaje : form.nombre).focus();
-      return;
-    }
-    formError.hidden = true;
-
-    const asunto = 'Contacto desde la web: ' + nombre + (empresa ? ' (' + empresa + ')' : '');
-    window.location.href =
-      'mailto:' + EMAIL +
-      '?subject=' + encodeURIComponent(asunto) +
-      '&body=' + encodeURIComponent(mensaje);
-  });
-}
-
-
-// ---------------------------------------------------------
-// 6. Año actual en el pie de página
+// 5. Año actual en el pie de página
 // ---------------------------------------------------------
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
