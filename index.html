@@ -2,35 +2,17 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Elkin Leonardo Basto | Ingeniero de Sistemas</title>
-  <meta name="description" content="Elkin Leonardo Basto, ingeniero de sistemas y especialista en gestión de infraestructura de TI. 10 años en servidores, redes, Microsoft 365, mesa de servicio y seguridad.">
-  <meta name="theme-color" content="#EEF0F2">
-
-  <meta property="og:title" content="Elkin Leonardo Basto | Ingeniero de Sistemas">
-  <meta property="og:description" content="Especialista en gestión de infraestructura de TI: servidores, redes, Microsoft 365, mesa de servicio y seguridad.">
-  <meta property="og:type" content="website">
-
-  <link rel="icon" href="img/logo.svg?v=7" type="image/svg+xml">
-
-  <!-- Tipografía: Sora para títulos e Inter para el texto -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elkin Basto | Ingeniero de Sistemas</title>
+  <meta name="description" content="Elkin Basto, ingeniero de sistemas especialista en infraestructura de TI: redes, servidores, Microsoft 365, mesa de servicio y seguridad.">
+  <meta name="theme-color" content="#E9EBEE">
+  <link rel="icon" href="img/logo.svg?v=9" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
-
-  <!-- ?v=7 es la versión: al cambiarla, los navegadores descargan el archivo nuevo -->
-  <link rel="stylesheet" href="css/styles.css?v=7">
-
-  <!-- Aplica el tema guardado antes de pintar, para evitar un parpadeo -->
-  <script>
-    try {
-      var t = localStorage.getItem('tema');
-      if (t) document.documentElement.setAttribute('data-theme', t);
-    } catch (e) {}
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=9">
 </head>
 <body>
-  <!-- Íconos reutilizables: se usan con <svg><use href="#i-nombre"/></svg> -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
       <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></symbol>
@@ -63,419 +45,144 @@
 
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <!-- Un solo brillo de fondo, para que el vidrio del menú tenga algo que difuminar -->
-  <div class="backdrop" aria-hidden="true"></div>
-
-  <!-- ================= ENCABEZADO (vidrio) ================= -->
+  <!-- Encabezado: píldora en relieve -->
   <header class="site-header">
-    <div class="header-bar glass">
-      <a href="#inicio" class="brand" aria-label="Elkin Basto, ir al inicio">
-        <img src="img/logo.svg?v=7" alt="" width="34" height="34">
-        <span>Elkin Basto</span>
-      </a>
-
-      <nav id="menu" class="nav" aria-label="Principal">
-        <ul>
-          <li><a href="#experiencia">Experiencia</a></li>
-          <li><a href="#infraestructura">Infraestructura</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#formacion">Formación</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
+    <div class="bar raised">
+      <a class="brand" href="#inicio"><img src="img/logo.svg?v=9" alt="" width="32" height="32"><span>Elkin Basto</span></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#areas">Áreas</a>
+        <a href="#trayectoria">Trayectoria</a>
+        <a href="#contacto">Contacto</a>
       </nav>
-
-      <div class="header-actions">
-        <!-- Interruptor tipo iPhone para el modo oscuro -->
-        <button class="theme-switch" type="button" role="switch" aria-checked="false" aria-label="Modo oscuro">
-          <span class="theme-switch-track">
-            <svg class="ico ico-sun"><use href="#i-sun"/></svg>
-            <svg class="ico ico-moon"><use href="#i-moon"/></svg>
-            <span class="theme-switch-thumb"></span>
-          </span>
-        </button>
-
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
-          <span class="nav-toggle-bar"></span>
-          <span class="sr-only">Abrir menú</span>
-        </button>
-      </div>
     </div>
   </header>
 
   <main id="contenido">
 
-    <!-- ================= PORTADA (bento) ================= -->
-    <section id="inicio" class="section hero">
-      <div class="wrap bento">
-
-        <!-- Presentación -->
-        <div class="tile tile-intro">
-          <p class="status-pill">
-            <span class="status-dot" aria-hidden="true"></span>
-            Especialista en gestión de infraestructura de TI
-          </p>
-          <h1 class="hero-name">Elkin Basto</h1>
-          <p class="hero-lead">
-            Ingeniero de sistemas. Garantizo la disponibilidad, la continuidad y la seguridad
-            de los servicios de TI: servidores, redes, Microsoft 365 y mesa de servicio con cumplimiento de SLA.
-          </p>
-          <div class="hero-actions">
-            <a class="pill-btn pill-btn-primary" href="#contacto">
-              <span class="pill-ico"><svg class="ico"><use href="#i-chat"/></svg></span>
-              <span class="pill-label">Hablemos</span>
-            </a>
-            <a class="pill-btn" href="#experiencia">
-              <span class="pill-ico"><svg class="ico"><use href="#i-briefcase"/></svg></span>
-              <span class="pill-label">Ver experiencia</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Panel tipo NOC con el diagrama de red interactivo -->
-        <figure class="tile tile-noc" aria-labelledby="noc-title">
-          <div class="noc-bar">
-            <div>
-              <h2 id="noc-title" class="noc-title">Mapa de infraestructura</h2>
-              <p class="noc-sub">Toca un equipo para ver qué hago en esa capa.</p>
-            </div>
-            <span class="noc-chip"><span class="status-dot" aria-hidden="true"></span><span>8 equipos</span></span>
-          </div>
-          <div class="topo" id="topo">
-            <svg class="topo-links" id="topo-links" viewBox="0 0 100 62" preserveAspectRatio="none" aria-hidden="true"></svg>
-          </div>
-          <div class="topo-detail" id="topo-detail" aria-live="polite"></div>
-        </figure>
-
-        <!-- Datos clave de la hoja de vida -->
-        <div class="tile tile-stat">
-          <p class="stat-num">10</p>
-          <h3>Años en infraestructura</h3>
-          <p>Servidores, redes y soporte técnico desde 2016.</p>
-        </div>
-        <div class="tile tile-stat">
-          <p class="stat-num">25</p>
-          <h3>Analistas liderados</h3>
-          <p>Mesa de servicio con priorización de incidentes y SLA.</p>
-        </div>
-        <div class="tile tile-stat">
-          <span class="icon-key"><svg class="ico"><use href="#i-server"/></svg></span>
-          <h3>Windows y Linux</h3>
-          <p>Servidores físicos, virtuales y contenedores Docker.</p>
-        </div>
-        <div class="tile tile-stat tile-accent">
-          <span class="icon-key"><svg class="ico"><use href="#i-chart"/></svg></span>
-          <h3>KPIs con Grafana</h3>
-          <p>Desempeño y productividad medidos con datos.</p>
+    <!-- ===== Portada: tipografía grande + rack en relieve ===== -->
+    <section id="inicio" class="hero wrap">
+      <div class="hero-text">
+        <p class="chip raised"><span class="led led-ok" aria-hidden="true"></span>Infraestructura de TI</p>
+        <h1 class="name">Elkin<br>Basto</h1>
+        <p class="lead">Ingeniero de sistemas y especialista en gestión de infraestructura de TI. Mantengo los servicios <strong>disponibles, seguros y medibles</strong>.</p>
+        <div class="actions">
+          <a class="pill pill-primary" href="#contacto">
+            <span class="pill-ico"><svg class="ico"><use href="#i-chat"/></svg></span>Hablemos
+          </a>
+          <a class="pill raised" href="#areas">
+            <span class="pill-ico"><svg class="ico"><use href="#i-briefcase"/></svg></span>Qué hago
+          </a>
         </div>
       </div>
-    </section>
 
-    <!-- ================= EXPERIENCIA (línea de tiempo) ================= -->
-    <section id="experiencia" class="section">
-      <div class="wrap">
-        <header class="section-head">
-          <h2>Experiencia</h2>
-          <p>Del trabajo en campo a liderar equipos y la operación de TI de una empresa.</p>
-        </header>
-
-        <ol class="timeline">
-          <li class="tile job job-current">
-            <div class="job-meta">
-              <span class="job-date">Oct 2025 – actualidad</span>
-              <span class="job-now"><span class="status-dot" aria-hidden="true"></span>Cargo actual</span>
-            </div>
-            <h3>Ingeniero de Sistemas</h3>
-            <p class="job-org">Empresa de servicios públicos</p>
-            <ul class="job-list">
-              <li>Soporte a la gestión y operación de TI del área administrativa, con disponibilidad y continuidad de los servicios.</li>
-              <li>Administración de Microsoft 365, Active Directory, servidores de archivos y equipos de cómputo.</li>
-              <li>Gestión de incidentes de infraestructura, control de accesos y permisos.</li>
-              <li>Implementación y capacitación del ERP SIESA; apoyo en administración y corrección de bases de datos.</li>
-            </ul>
-            <ul class="tags"><li>Microsoft 365</li><li>Active Directory</li><li>SIESA</li><li>Mesa de ayuda</li></ul>
-          </li>
-
-          <li class="tile job">
-            <div class="job-meta"><span class="job-date">Jul 2025 – Oct 2025</span></div>
-            <h3>Technology Service Area Chief</h3>
-            <p class="job-org">Empresa de servicios tecnológicos</p>
-            <ul class="job-list">
-              <li>Dirección de un equipo de 25 analistas de mesa de servicio: asignación, seguimiento y priorización de incidentes con cumplimiento de SLA.</li>
-              <li>Infraestructura de servidores dockerizados.</li>
-              <li>KPIs en Grafana y PostgreSQL para medir desempeño, productividad y eficiencia.</li>
-              <li>Estrategias de mejora continua para reducir tiempos de atención y capacitación del equipo.</li>
-            </ul>
-            <ul class="tags"><li>Liderazgo</li><li>SLA</li><li>Docker</li><li>Grafana</li><li>PostgreSQL</li></ul>
-          </li>
-
-          <li class="tile job">
-            <div class="job-meta"><span class="job-date">2020 – 2025</span></div>
-            <h3>Técnico de Proyectos y Servicios Senior</h3>
-            <p class="job-org">Integrador de soluciones tecnológicas</p>
-            <ul class="job-list">
-              <li>Configuración y mantenimiento de servidores Windows y Linux; programación y configuración de software.</li>
-              <li>Instalación y gestión de redes WAN/LAN y de sistemas de CCTV.</li>
-              <li>Mantenimiento de infraestructura física y virtual, y asistencia a usuarios.</li>
-              <li>Proyectos Sicov (CDA, CEA y CRC), simuladores del SENA y sonido y pantalla del estadio Manuel Murillo Toro de Ibagué.</li>
-            </ul>
-            <ul class="tags"><li>Windows Server</li><li>Linux</li><li>WAN/LAN</li><li>CCTV</li></ul>
-          </li>
-
-          <li class="tile job">
-            <div class="job-meta"><span class="job-date">2016 – 2020</span></div>
-            <h3>Técnico de Implementación</h3>
-            <p class="job-org">Empresa de energías alternativas</p>
-            <ul class="job-list">
-              <li>Instalación, configuración y administración de servidores Windows y Linux.</li>
-              <li>Instalación y configuración de infraestructura de red y sistemas de CCTV.</li>
-              <li>Mantenimiento de componentes físicos y virtuales; proyectos Sicov (CDA y CEA).</li>
-            </ul>
-            <ul class="tags"><li>Servidores</li><li>Redes</li><li>CCTV</li></ul>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ================= INFRAESTRUCTURA (bento) ================= -->
-    <section id="infraestructura" class="section">
-      <div class="wrap">
-        <header class="section-head">
-          <h2>Lo que administro</h2>
-          <p>Cinco capas, de la conexión a internet hasta el puesto de trabajo.</p>
-        </header>
-
-        <div class="bento bento-layers">
-          <article class="tile layer layer-wide" id="capa-red">
-            <div class="tile-head">
-              <span class="icon-key"><svg class="ico"><use href="#i-shield"/></svg></span>
-              <h3>Redes y comunicaciones</h3>
-            </div>
-            <p>Redes WAN/LAN, firewalls Fortinet, switches y puntos de acceso Cisco y Aruba, VPN, segmentación y telefonía IP.</p>
-            <ul class="tags"><li>Fortinet</li><li>Cisco</li><li>Aruba</li><li>Planet</li><li>WAN/LAN</li><li>Telefonía IP</li></ul>
-          </article>
-
-          <article class="tile layer" id="capa-nube">
-            <div class="tile-head">
-              <span class="icon-key"><svg class="ico"><use href="#i-cloud"/></svg></span>
-              <h3>Nube y colaboración</h3>
-            </div>
-            <p>Microsoft 365 y Active Directory: cuentas, licencias, accesos, permisos y servidores de archivos.</p>
-            <ul class="tags"><li>Microsoft 365</li><li>Active Directory</li></ul>
-          </article>
-
-          <article class="tile layer" id="capa-servidores">
-            <div class="tile-head">
-              <span class="icon-key"><svg class="ico"><use href="#i-server"/></svg></span>
-              <h3>Servidores y contenedores</h3>
-            </div>
-            <p>Windows Server y Linux, infraestructura virtual y servicios en Docker sobre equipos HP, Dell y Lenovo.</p>
-            <ul class="tags"><li>Windows Server</li><li>Linux</li><li>Docker</li><li>UPS</li></ul>
-          </article>
-
-          <article class="tile layer" id="capa-monitoreo">
-            <div class="tile-head">
-              <span class="icon-key"><svg class="ico"><use href="#i-pulse"/></svg></span>
-              <h3>Monitoreo y seguridad</h3>
-            </div>
-            <p>Indicadores en Grafana, protección de equipos con CrowdStrike y bases de datos SQL y PostgreSQL.</p>
-            <ul class="tags"><li>Grafana</li><li>CrowdStrike</li><li>PostgreSQL</li><li>SQL</li></ul>
-          </article>
-
-          <article class="tile layer" id="capa-fisica">
-            <div class="tile-head">
-              <span class="icon-key"><svg class="ico"><use href="#i-camera"/></svg></span>
-              <h3>Seguridad física</h3>
-            </div>
-            <p>Videovigilancia y control de acceso: cámaras, grabadores y monitoreo.</p>
-            <ul class="tags"><li>Hikvision</li><li>Vivotek</li><li>Bosch</li></ul>
-          </article>
+      <!-- Rack: cada unidad es un área de trabajo -->
+      <figure class="rack raised" aria-label="Áreas de trabajo representadas como un rack de servidores">
+        <div class="rack-head">
+          <span class="rack-title">Rack principal</span>
+          <span class="rack-status"><span class="led led-ok" aria-hidden="true"></span>Todo operativo</span>
         </div>
-      </div>
-    </section>
-
-    <!-- ================= PROYECTOS (bento) ================= -->
-    <section id="proyectos" class="section">
-      <div class="wrap">
-        <header class="section-head">
-          <h2>Proyectos</h2>
-          <p>Trabajos con resultados concretos para la operación.</p>
-        </header>
-
-        <ul class="bento bento-projects" role="list">
-          <li class="tile project project-featured">
-            <span class="project-label">Proyecto destacado</span>
-
-            <!-- Ilustración de la bandeja de tickets (decorativa) -->
-            <div class="ticket-board" aria-hidden="true">
-              <div class="ticket"><span class="ticket-id">#1042</span><span class="ticket-title">Restablecer acceso a la VPN</span><span class="ticket-state state-progress">En curso</span></div>
-              <div class="ticket"><span class="ticket-id">#1041</span><span class="ticket-title">Equipo nuevo para contabilidad</span><span class="ticket-state state-new">Nuevo</span></div>
-              <div class="ticket"><span class="ticket-id">#1039</span><span class="ticket-title">Permisos en servidor de archivos</span><span class="ticket-state state-done">Cerrado</span></div>
-            </div>
-
-            <div class="tile-head">
-              <span class="icon-key"><svg class="ico"><use href="#i-ticket"/></svg></span>
-              <h3>Mesa de servicio medida con datos</h3>
-            </div>
-            <p>Coordinación de 25 analistas con priorización por SLA, servidores dockerizados e indicadores en Grafana y PostgreSQL para reducir los tiempos de atención.</p>
-            <ul class="tags"><li>SLA</li><li>Docker</li><li>Grafana</li><li>PostgreSQL</li></ul>
+        <ul class="rack-units">
+          <li class="unit inset">
+            <span class="unit-ico"><svg class="ico"><use href="#i-shield"/></svg></span>
+            <span class="unit-name">Redes y seguridad</span>
+            <span class="unit-vents" aria-hidden="true"></span>
+            <span class="led led-ok" aria-hidden="true"></span>
           </li>
-
-          <li class="tile project">
-            <div class="tile-head">
-              <span class="icon-key"><svg class="ico"><use href="#i-doc"/></svg></span>
-              <h3>Implementación de SIESA</h3>
-            </div>
-            <p>Implementación y capacitación del ERP SIESA, con apoyo en la administración de sus bases de datos.</p>
-            <ul class="tags"><li>ERP</li><li>Bases de datos</li></ul>
+          <li class="unit inset">
+            <span class="unit-ico"><svg class="ico"><use href="#i-server"/></svg></span>
+            <span class="unit-name">Servidores y nube</span>
+            <span class="unit-vents" aria-hidden="true"></span>
+            <span class="led led-ok" aria-hidden="true"></span>
           </li>
-
-          <li class="tile project">
-            <div class="tile-head">
-              <span class="icon-key"><svg class="ico"><use href="#i-ticket"/></svg></span>
-              <h3>Mesa de ayuda en Microsoft 365</h3>
-            </div>
-            <p>Plataforma de tickets construida con SharePoint, Power Apps y Power Automate.</p>
-            <ul class="tags"><li>SharePoint</li><li>Power Apps</li></ul>
+          <li class="unit inset unit-hot">
+            <span class="unit-ico"><svg class="ico"><use href="#i-ticket"/></svg></span>
+            <span class="unit-name">Mesa de servicio</span>
+            <span class="unit-vents" aria-hidden="true"></span>
+            <span class="led led-warm" aria-hidden="true"></span>
           </li>
-
-          <li class="tile project">
-            <div class="tile-head">
-              <span class="icon-key"><svg class="ico"><use href="#i-globe"/></svg></span>
-              <h3>Estadio Manuel Murillo Toro</h3>
-            </div>
-            <p>Participación en la instalación del sistema de sonido y pantalla del estadio en Ibagué.</p>
-            <ul class="tags"><li>Audio</li><li>Pantalla</li></ul>
-          </li>
-
-          <li class="tile project">
-            <div class="tile-head">
-              <span class="icon-key"><svg class="ico"><use href="#i-switch"/></svg></span>
-              <h3>Sicov y simuladores SENA</h3>
-            </div>
-            <p>Infraestructura y configuración para centros de diagnóstico, enseñanza y reconocimiento (CDA, CEA y CRC) y simuladores del SENA.</p>
-            <ul class="tags"><li>Sicov</li><li>Simumak</li></ul>
+          <li class="unit inset">
+            <span class="unit-ico"><svg class="ico"><use href="#i-camera"/></svg></span>
+            <span class="unit-name">Seguridad física</span>
+            <span class="unit-vents" aria-hidden="true"></span>
+            <span class="led led-ok" aria-hidden="true"></span>
           </li>
         </ul>
+      </figure>
+    </section>
+
+    <!-- ===== Áreas ===== -->
+    <section id="areas" class="section wrap">
+      <h2 class="section-title">Qué hago</h2>
+      <div class="areas">
+        <article class="area raised">
+          <span class="key raised"><svg class="ico"><use href="#i-shield"/></svg></span>
+          <h3>Redes y seguridad</h3>
+          <p>Redes WAN/LAN, firewalls y VPN para que la empresa esté conectada y protegida.</p>
+        </article>
+        <article class="area raised">
+          <span class="key raised"><svg class="ico"><use href="#i-server"/></svg></span>
+          <h3>Servidores y nube</h3>
+          <p>Windows Server, Linux, contenedores y Microsoft 365 administrados con orden.</p>
+        </article>
+        <article class="area raised">
+          <span class="key raised"><svg class="ico"><use href="#i-chart"/></svg></span>
+          <h3>Mesa de servicio</h3>
+          <p>Incidentes priorizados por SLA y desempeño medido con indicadores.</p>
+        </article>
+        <article class="area raised">
+          <span class="key raised"><svg class="ico"><use href="#i-camera"/></svg></span>
+          <h3>Seguridad física</h3>
+          <p>Videovigilancia y control de acceso para las instalaciones.</p>
+        </article>
       </div>
     </section>
 
-    <!-- ================= FORMACIÓN, HERRAMIENTAS Y HABILIDADES ================= -->
-    <section id="formacion" class="section">
-      <div class="wrap">
-        <header class="section-head">
-          <h2>Formación y herramientas</h2>
-          <p>Base académica y el equipo con el que he trabajado en campo.</p>
-        </header>
-
-        <div class="bento">
-          <div class="tile tile-edu">
-            <div class="tile-head">
-              <span class="icon-key"><svg class="ico"><use href="#i-grad"/></svg></span>
-              <h3>Formación</h3>
-            </div>
-            <ul class="edu-list">
-              <li><strong>Especialista en Gestión de Infraestructura de TI</strong><span>Corporación Unificada Nacional de Educación Superior (CUN)</span></li>
-              <li><strong>Ingeniero de Sistemas</strong><span>Corporación Unificada Nacional de Educación Superior (CUN)</span></li>
-              <li><strong>Tecnólogo en Análisis y Desarrollo de Sistemas de Información</strong><span>Servicio Nacional de Aprendizaje (SENA)</span></li>
-              <li><strong>Diplomado en Machine Learning con Python</strong><span>Corporación Unificada Nacional de Educación Superior (CUN)</span></li>
-            </ul>
-          </div>
-
-          <div class="tile tile-tools">
-            <div class="tile-head">
-              <span class="icon-key"><svg class="ico"><use href="#i-tool"/></svg></span>
-              <h3>Herramientas y marcas</h3>
-            </div>
-            <dl class="tool-groups">
-              <div><dt>Redes</dt><dd><ul class="tags"><li>Fortinet</li><li>Cisco</li><li>Aruba</li><li>Planet</li><li>Netion</li></ul></dd></div>
-              <div><dt>Seguridad y video</dt><dd><ul class="tags"><li>CrowdStrike</li><li>Hikvision</li><li>Vivotek</li><li>Bosch</li></ul></dd></div>
-              <div><dt>Equipos y energía</dt><dd><ul class="tags"><li>HP</li><li>Dell</li><li>Lenovo</li><li>CDP UPS</li></ul></dd></div>
-              <div><dt>Datos y desarrollo</dt><dd><ul class="tags"><li>Grafana</li><li>SQL</li><li>PostgreSQL</li><li>PHP</li><li>Python</li></ul></dd></div>
-              <div><dt>Nube</dt><dd><ul class="tags"><li>Microsoft 365</li></ul></dd></div>
-              <div><dt>Audio y simulación</dt><dd><ul class="tags"><li>Bose</li><li>Simumak</li></ul></dd></div>
-            </dl>
-          </div>
-
-          <div class="tile tile-skills">
-            <h3>Habilidades</h3>
-            <ul class="skill-list">
-              <li>Resolución de problemas</li>
-              <li>Liderazgo técnico</li>
-              <li>Comunicación</li>
-              <li>Trabajo en equipo</li>
-              <li>Adaptabilidad</li>
-              <li>Gestión del tiempo</li>
-            </ul>
-          </div>
+    <!-- ===== Trayectoria resumida ===== -->
+    <section id="trayectoria" class="section wrap">
+      <h2 class="section-title">Trayectoria</h2>
+      <div class="facts">
+        <div class="fact raised">
+          <p class="fact-num">10</p>
+          <p class="fact-label">años en infraestructura y soporte de TI</p>
+        </div>
+        <div class="fact raised">
+          <p class="fact-num fact-word">Líder</p>
+          <p class="fact-label">de equipos de mesa de servicio</p>
+        </div>
+        <div class="fact raised">
+          <p class="fact-num fact-word">Esp.</p>
+          <p class="fact-label">en Gestión de Infraestructura de TI</p>
         </div>
       </div>
+
+      <ul class="stack" aria-label="Tecnologías">
+        <li class="raised">Fortinet</li><li class="raised">Cisco</li><li class="raised">Microsoft 365</li>
+        <li class="raised">Windows Server</li><li class="raised">Linux</li><li class="raised">Docker</li>
+        <li class="raised">Grafana</li><li class="raised">Hikvision</li>
+      </ul>
     </section>
 
-    <!-- ================= MÉTODO ================= -->
-    <section id="metodo" class="section">
-      <div class="wrap">
-        <header class="section-head">
-          <h2>Cómo trabajo</h2>
-          <p>Tres marcos de referencia que guían el día a día.</p>
-        </header>
-
-        <div class="bento bento-3">
-          <div class="tile">
-            <div class="tile-head">
-              <span class="icon-key"><svg class="ico"><use href="#i-cycle"/></svg></span>
-              <h3>ITIL</h3>
-            </div>
-            <p>Cada solicitud entra por un canal, tiene un responsable y se cierra con registro. Los cambios se planean, se comunican y se pueden revertir.</p>
-          </div>
-          <div class="tile">
-            <div class="tile-head">
-              <span class="icon-key"><svg class="ico"><use href="#i-lock"/></svg></span>
-              <h3>ISO/IEC 27001</h3>
-            </div>
-            <p>Acceso solo a lo necesario, respaldos que se prueban y evidencia lista para cuando llega la auditoría.</p>
-          </div>
-          <div class="tile">
-            <div class="tile-head">
-              <span class="icon-key"><svg class="ico"><use href="#i-calendar"/></svg></span>
-              <h3>PMBOK</h3>
-            </div>
-            <p>Alcance, tiempos y riesgos claros antes de empezar, y avances que se pueden medir durante el proyecto.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= CONTACTO ================= -->
-    <section id="contacto" class="section">
-      <div class="wrap">
-        <div class="tile tile-ink tile-contact">
-          <div>
-            <h2>Hablemos</h2>
-            <p>¿Necesitas ordenar tu infraestructura, mejorar tu mesa de servicio o migrar a Microsoft 365? Escríbeme por LinkedIn.</p>
-          </div>
-          <div class="contact-links">
-            <a class="pill-btn pill-btn-primary" href="https://www.linkedin.com/in/elkin-leonardo-basto-27083b202" target="_blank" rel="noopener">
-              <span class="pill-ico"><svg class="ico"><use href="#i-user"/></svg></span>
-              <span class="pill-label">Ver perfil en LinkedIn</span>
-            </a>
-            <a class="pill-btn" href="https://github.com/LeonardoBasto" target="_blank" rel="noopener">
-              <span class="pill-ico"><svg class="ico"><use href="#i-code"/></svg></span>
-              <span class="pill-label">GitHub</span>
-            </a>
-          </div>
+    <!-- ===== Contacto ===== -->
+    <section id="contacto" class="section wrap">
+      <div class="contact raised">
+        <h2>Hablemos</h2>
+        <p>Infraestructura, mesa de servicio o Microsoft 365: cuéntame qué necesitas.</p>
+        <div class="actions">
+          <a class="pill pill-primary" href="https://www.linkedin.com/in/elkin-leonardo-basto-27083b202" target="_blank" rel="noopener">
+            <span class="pill-ico"><svg class="ico"><use href="#i-user"/></svg></span>LinkedIn
+          </a>
+          <a class="pill raised" href="https://github.com/LeonardoBasto" target="_blank" rel="noopener">
+            <span class="pill-ico"><svg class="ico"><use href="#i-code"/></svg></span>GitHub
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ================= PIE ================= -->
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <p>© <span id="year"></span> Elkin Leonardo Basto</p>
-      <p>Hecho a mano y publicado con GitHub Pages.</p>
-    </div>
+  <footer class="footer wrap">
+    <p>© <span id="year">2026</span> Elkin Basto</p>
   </footer>
 
-  <script src="js/main.js?v=7"></script>
+  <script src="js/main.js?v=9"></script>
 </body>
 </html>
