@@ -6,11 +6,13 @@
   <title>Elkin Basto | Ingeniero de Sistemas</title>
   <meta name="description" content="Elkin Basto, ingeniero de sistemas especialista en infraestructura de TI: redes, servidores, Microsoft 365, mesa de servicio y seguridad.">
   <meta name="theme-color" content="#3B4049">
-  <link rel="icon" href="img/logo.svg?v=15" type="image/svg+xml">
+  <link rel="icon" href="img/logo.svg?v=16" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=15">
+  <link rel="stylesheet" href="css/styles.css?v=16">
+  <!-- Marca que JavaScript está activo (para las animaciones de entrada) -->
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -40,6 +42,7 @@
       <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></symbol>
       <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 6.3-6.3a4 4 0 0 1-5-5L9.6 5.4a4 4 0 0 0 5.1.9Z"/><path d="m3 21 6-6"/></symbol>
       <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
     </defs>
   </svg>
 
@@ -48,7 +51,7 @@
   <!-- Encabezado: píldora en relieve -->
   <header class="site-header">
     <div class="bar raised">
-      <a class="brand" href="#inicio"><img src="img/logo.svg?v=15" alt="" width="32" height="32"><span>Elkin Basto</span></a>
+      <a class="brand" href="#inicio"><img src="img/logo.svg?v=16" alt="" width="32" height="32"><span>Elkin Basto</span></a>
       <nav class="nav" aria-label="Principal">
         <a href="#areas">Áreas</a>
         <a href="#trayectoria">Trayectoria</a>
@@ -59,11 +62,11 @@
 
   <main id="contenido">
 
-    <!-- ===== Portada: tipografía grande + rack en relieve ===== -->
-    <section id="inicio" class="hero wrap">
+    <!-- ===== Portada: tipografía grande + consola en relieve ===== -->
+    <section id="inicio" class="hero wrap" data-intro>
       <div class="hero-text">
         <p class="chip raised"><span class="led led-ok" aria-hidden="true"></span>Infraestructura de TI</p>
-        <h1 class="name">Elkin<br>Basto</h1>
+        <h1 class="name"><span class="line"><span>Elkin</span></span><span class="line"><span>Basto</span></span></h1>
         <p class="lead">Ingeniero de sistemas y especialista en gestión de infraestructura de TI. Mantengo los servicios <strong>disponibles, seguros y medibles</strong>.</p>
         <div class="actions">
           <a class="pill pill-primary" href="#contacto">
@@ -103,17 +106,28 @@
     </section>
 
 
-    <!-- ===== Franja inclinada de tecnologías ===== -->
-    <div class="ticker" aria-label="Tecnologías con las que trabajo">
+    <!-- ===== Franjas cruzadas de tecnologías ===== -->
+    <div class="tickers">
+    <div class="ticker ticker-back" aria-hidden="true">
+      <div class="ticker-track">
+        <ul class="ticker-group"><li>Disponibilidad</li><li>Seguridad</li><li>Continuidad</li><li>SLA</li><li>Monitoreo</li><li>Soporte</li><li>Automatización</li><li>Respaldo</li></ul>
+        <ul class="ticker-group"><li>Disponibilidad</li><li>Seguridad</li><li>Continuidad</li><li>SLA</li><li>Monitoreo</li><li>Soporte</li><li>Automatización</li><li>Respaldo</li></ul>
+      </div>
+    </div>
+    <div class="ticker ticker-front" aria-label="Tecnologías con las que trabajo">
       <div class="ticker-track">
         <ul class="ticker-group"><li>Fortinet</li><li>Cisco</li><li>Microsoft 365</li><li>Windows Server</li><li>Linux</li><li>Docker</li><li>Grafana</li><li>Hikvision</li><li>Active Directory</li><li>Redes WAN/LAN</li></ul>
         <ul class="ticker-group" aria-hidden="true"><li>Fortinet</li><li>Cisco</li><li>Microsoft 365</li><li>Windows Server</li><li>Linux</li><li>Docker</li><li>Grafana</li><li>Hikvision</li><li>Active Directory</li><li>Redes WAN/LAN</li></ul>
       </div>
     </div>
+    </div>
 
     <!-- ===== Áreas ===== -->
     <section id="areas" class="section wrap">
-      <h2 class="section-title">Qué hago</h2>
+      <header class="section-head">
+        <h2 class="section-title">Qué hago</h2>
+        <p>Cuatro frentes, un mismo objetivo: que la operación no se detenga.</p>
+      </header>
       <div class="areas">
         <article class="area raised">
           <span class="key raised"><svg class="ico"><use href="#i-shield"/></svg></span>
@@ -140,10 +154,13 @@
 
     <!-- ===== Trayectoria resumida ===== -->
     <section id="trayectoria" class="section wrap">
-      <h2 class="section-title">Trayectoria</h2>
+      <header class="section-head">
+        <h2 class="section-title">Trayectoria</h2>
+        <p>Del trabajo en campo a liderar equipos de servicio.</p>
+      </header>
       <div class="facts">
         <div class="fact raised">
-          <p class="fact-num">10</p>
+          <p class="fact-num"><span class="count" data-to="10">10</span></p>
           <p class="fact-label">años en infraestructura y soporte de TI</p>
         </div>
         <div class="fact raised">
@@ -151,7 +168,7 @@
           <p class="fact-label">de equipos de mesa de servicio</p>
         </div>
         <div class="fact raised">
-          <p class="fact-num fact-word">Esp.</p>
+          <p class="fact-num fact-word">Especialista</p>
           <p class="fact-label">en Gestión de Infraestructura de TI</p>
         </div>
       </div>
@@ -160,6 +177,7 @@
 
     <!-- ===== Contacto ===== -->
     <section id="contacto" class="section wrap">
+      <div class="contact-ring">
       <div class="contact raised">
         <h2>Hablemos</h2>
         <p>Infraestructura, mesa de servicio o Microsoft 365: cuéntame qué necesitas.</p>
@@ -172,13 +190,15 @@
           </a>
         </div>
       </div>
+      </div>
     </section>
   </main>
 
   <footer class="footer wrap">
-    <p>© <span id="year">2026</span> Elkin Basto</p>
+    <p>© <span id="year">2026</span> Elkin Basto. Hecho a mano y publicado con GitHub Pages.</p>
+    <a class="to-top raised" href="#inicio" aria-label="Volver arriba"><svg class="ico"><use href="#i-arrow-up"/></svg></a>
   </footer>
 
-  <script src="js/main.js?v=15"></script>
+  <script src="js/main.js?v=16"></script>
 </body>
 </html>
