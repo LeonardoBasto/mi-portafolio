@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elkin Basto | Ingeniero de Sistemas</title>
   <meta name="description" content="Elkin Basto, ingeniero de sistemas especialista en infraestructura de TI: redes, servidores, Microsoft 365, mesa de servicio y seguridad.">
-  <meta name="theme-color" content="#1C1F24">
-  <link rel="icon" href="img/logo.svg?v=11" type="image/svg+xml">
+  <meta name="theme-color" content="#3B4049">
+  <link rel="icon" href="img/logo.svg?v=15" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=11">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=15">
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -48,7 +48,7 @@
   <!-- Encabezado: píldora en relieve -->
   <header class="site-header">
     <div class="bar raised">
-      <a class="brand" href="#inicio"><img src="img/logo.svg?v=11" alt="" width="32" height="32"><span>Elkin Basto</span></a>
+      <a class="brand" href="#inicio"><img src="img/logo.svg?v=15" alt="" width="32" height="32"><span>Elkin Basto</span></a>
       <nav class="nav" aria-label="Principal">
         <a href="#areas">Áreas</a>
         <a href="#trayectoria">Trayectoria</a>
@@ -75,38 +75,30 @@
         </div>
       </div>
 
-      <!-- Rack: cada unidad es un área de trabajo -->
-      <figure class="rack raised" aria-label="Áreas de trabajo representadas como un rack de servidores">
-        <div class="rack-head">
-          <span class="rack-title">Rack principal</span>
-          <span class="rack-status"><span class="led led-ok" aria-hidden="true"></span>Todo operativo</span>
+      <!-- Consola: resume las áreas de trabajo escribiendo comandos (js/main.js) -->
+      <figure class="term raised" aria-labelledby="term-title">
+        <div class="term-bar">
+          <span class="term-title" id="term-title">elkin@infraestructura</span>
+          <span class="term-status inset"><span class="led led-ok" aria-hidden="true"></span>Conectado</span>
         </div>
-        <ul class="rack-units">
-          <li class="unit inset">
-            <span class="unit-ico"><svg class="ico"><use href="#i-shield"/></svg></span>
-            <span class="unit-name">Redes y seguridad</span>
-            <span class="unit-vents" aria-hidden="true"></span>
-            <span class="led led-ok" aria-hidden="true"></span>
-          </li>
-          <li class="unit inset">
-            <span class="unit-ico"><svg class="ico"><use href="#i-server"/></svg></span>
-            <span class="unit-name">Servidores y nube</span>
-            <span class="unit-vents" aria-hidden="true"></span>
-            <span class="led led-ok" aria-hidden="true"></span>
-          </li>
-          <li class="unit inset unit-hot">
-            <span class="unit-ico"><svg class="ico"><use href="#i-ticket"/></svg></span>
-            <span class="unit-name">Mesa de servicio</span>
-            <span class="unit-vents" aria-hidden="true"></span>
-            <span class="led led-warm" aria-hidden="true"></span>
-          </li>
-          <li class="unit inset">
-            <span class="unit-ico"><svg class="ico"><use href="#i-camera"/></svg></span>
-            <span class="unit-name">Seguridad física</span>
-            <span class="unit-vents" aria-hidden="true"></span>
-            <span class="led led-ok" aria-hidden="true"></span>
-          </li>
-        </ul>
+
+        <!-- Resumen para lectores de pantalla -->
+        <p class="sr-only">Áreas de trabajo: redes y seguridad, servidores y nube, Microsoft 365 y mesa de servicio. 10 años en infraestructura de TI.</p>
+
+<!-- Contenido final (se ve tal cual sin JavaScript); js/main.js lo anima -->
+        <div class="term-screen inset" id="term" aria-hidden="true">
+          <p class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></p>
+          <p class="t-line t-out">Elkin Basto, ingeniero de sistemas</p>
+          <p class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">python verificar_servicios.py</span></p>
+          <p class="t-line t-out"><span class="t-ok">✓</span> Conectado a 4 servicios</p>
+          <p class="t-line t-row"><span class="t-name">Redes y seguridad</span><span class="t-bar"><span class="fill">██████████</span></span><span class="t-pct">100%</span><span class="t-ok">OK</span></p>
+          <p class="t-line t-row"><span class="t-name">Servidores y nube</span><span class="t-bar"><span class="fill">██████████</span></span><span class="t-pct">100%</span><span class="t-ok">OK</span></p>
+          <p class="t-line t-row"><span class="t-name">Microsoft 365</span><span class="t-bar"><span class="fill">██████████</span></span><span class="t-pct">100%</span><span class="t-ok">OK</span></p>
+          <p class="t-line t-row"><span class="t-name">Mesa de servicio</span><span class="t-bar"><span class="fill">██████████</span></span><span class="t-pct">100%</span><span class="t-warn">SLA ✓</span></p>
+          <p class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">uptime</span></p>
+          <p class="t-line t-out">10 años en infraestructura de TI</p>
+          <p class="t-line"><span class="t-prompt">$</span> <span class="t-caret"></span></p>
+        </div>
       </figure>
     </section>
 
@@ -187,6 +179,6 @@
     <p>© <span id="year">2026</span> Elkin Basto</p>
   </footer>
 
-  <script src="js/main.js?v=11"></script>
+  <script src="js/main.js?v=15"></script>
 </body>
 </html>
