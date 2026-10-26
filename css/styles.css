@@ -5,6 +5,10 @@
    ========================================================= */
 
 :root {
+  /* Paleta de las tres zonas */
+  --z1: #3B4049;
+  --z2: #24406E; --z2-hi: #2D5089; --z2-lo: #1A2E4F; --z2-muted: #BDC8DB; --z2-line: #325998;   /* azul cobalto */
+  --z3: #EEF1F6; --z3-hi: #FFFFFF; --z3-lo: #C5CCD8; --z3-muted: #555E6C; --z3-line: #D5DBE4;   /* blanco */
   /* Grafito oscuro: el relieve sale de esta base */
   --bg:   #3B4049;     /* gris grafito claro: el relieve se ve con más fuerza */
   --hi:   #4D535E;     /* luz del relieve */
@@ -71,6 +75,29 @@ img, svg { display: block; }
 .nav a:hover, .nav a.is-active { box-shadow: var(--press); color: var(--accent-text); }
 .bar { transition: min-height .25s, box-shadow .25s; }
 .site-header.is-scrolled .bar { min-height: 52px; }
+/* Barra superior blanca: usa los mismos valores que la zona blanca */
+.site-header .bar {
+  --bg: var(--z3); --hi: var(--z3-hi); --lo: var(--z3-lo);
+  --text: #1E2126; --accent-text: #B4540A;
+  --press: inset 4px 4px 9px var(--lo), inset -4px -4px 9px var(--hi);
+  background: rgba(247, 249, 252, .94);
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,.7);
+  box-shadow: 0 12px 30px rgba(12, 16, 24, .28), 0 2px 6px rgba(12, 16, 24, .12);
+  -webkit-backdrop-filter: blur(14px) saturate(140%); backdrop-filter: blur(14px) saturate(140%);
+}
+/* Botones del menú en relieve: salen de la barra y se hunden al usarlos */
+.site-header .bar { background: var(--z3); padding-right: 12px; }
+.site-header .nav { gap: 10px; }
+.site-header .nav a {
+  color: #3A404A; background: var(--z3);
+  box-shadow: 5px 5px 11px #B4BDCC, -5px -5px 11px #FFFFFF;
+  transition: box-shadow .2s, color .2s, transform .2s;
+}
+.site-header .nav a:hover { color: var(--accent-text); transform: translateY(-1px); }
+.site-header .nav a.is-active,
+.site-header .nav a:active { color: var(--accent-text); box-shadow: inset 4px 4px 9px #B4BDCC, inset -4px -4px 9px #FFFFFF; transform: none; }
+.site-header .brand img { box-shadow: 3px 3px 7px var(--lo), -3px -3px 7px var(--hi); }
 
 /* ----- Botones píldora con ícono y divisor ----- */
 .pill {
@@ -226,6 +253,36 @@ img, svg { display: block; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 @keyframes popIn  { from { opacity: 0; transform: translateY(24px) scale(.96); } to { opacity: 1; transform: none; } }
 
+/* ----- Tres zonas de color, sin líneas divisorias -----
+   Cada zona empieza con un degradado desde el color anterior,
+   así el cambio se funde y no se nota un borde.
+   Para cambiar la paleta basta con editar --z1, --z2 y --z3 en :root. */
+.zone {
+  position: relative;
+  background: var(--bg); color: var(--text);
+  --raise:   10px 10px 22px var(--lo), -8px -8px 20px var(--hi);
+  --raise-s: 6px 6px 14px var(--lo), -5px -5px 12px var(--hi);
+  --press:   inset 5px 5px 10px var(--lo), inset -4px -4px 9px var(--hi);
+}
+.zone-night {
+  --bg: var(--z2); --hi: var(--z2-hi); --lo: var(--z2-lo); --muted: var(--z2-muted); --line: var(--z2-line);
+  margin-top: -90px; padding-top: 70px; padding-bottom: 110px;
+  /* entra desde el grafito y sale hacia el blanco, sin bordes */
+  background: linear-gradient(to bottom, var(--z1) 0, var(--z2) 200px, var(--z2) calc(100% - 210px), var(--z3) 100%);
+}
+.zone-light {
+  --bg: var(--z3); --hi: var(--z3-hi); --lo: var(--z3-lo); --muted: var(--z3-muted); --line: var(--z3-line);
+  --text: #1E2126; --accent: #EE7A0C; --accent-text: #B4540A;
+  --glow: 0 10px 24px rgba(238,122,12,.32);
+  background: var(--z3);
+}
+.zone-light .fact-num { background: linear-gradient(135deg, #F59E0B 0%, #EE7A0C 50%, #D9480F 100%); -webkit-background-clip: text; background-clip: text; }
+.zone-foot { background: var(--z3); }
+#contacto { padding-top: clamp(8px, 2vw, 24px); }
+.zone-foot .footer { padding-block: 4px 40px; }
+/* las franjas cruzadas quedan encima del paso entre portada y zona 2 */
+.tickers { z-index: 3; }
+
 /* ----- Secciones ----- */
 .section { padding-block: clamp(44px, 6vw, 80px); }
 .section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 32px; margin-bottom: clamp(26px, 3.4vw, 40px); }
@@ -276,6 +333,7 @@ img, svg { display: block; }
 }
 @media (max-width: 640px) {
   .nav a { padding: 8px 10px; font-size: .88rem; }
+  .site-header .nav { gap: 7px; }
   .brand span { display: none; }
   .areas, .facts { grid-template-columns: 1fr; gap: 20px; }
   .term { padding: 14px; }
