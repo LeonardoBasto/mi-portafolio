@@ -3,62 +3,240 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portafolio de Elkin Basto, Ingeniero de Sistemas">
   <title>Elkin Basto | Ingeniero de Sistemas</title>
+  <meta name="description" content="Elkin Basto, ingeniero de sistemas. Infraestructura TI, redes, servidores, Microsoft 365 y seguridad para empresas.">
+  <meta name="theme-color" content="#172A3A">
+
+  <!-- Vista previa al compartir el enlace (WhatsApp, LinkedIn, Teams) -->
+  <meta property="og:title" content="Elkin Basto | Ingeniero de Sistemas">
+  <meta property="og:description" content="Infraestructura TI, redes, servidores, Microsoft 365 y seguridad.">
+  <meta property="og:type" content="website">
+
   <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+
+  <!-- Tipografía: Archivo, con eje de ancho variable para los títulos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Aplica el tema guardado antes de pintar, para evitar un parpadeo -->
+  <script>
+    try {
+      var t = localStorage.getItem('tema');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ================= ENCABEZADO ================= -->
   <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <img src="img/logo.svg" alt="" width="32" height="32">
+    <div class="wrap header-inner">
+      <a href="#inicio" class="brand" aria-label="Elkin Basto, ir al inicio">
+        <img src="img/logo.svg" alt="" width="36" height="36">
         <span>Elkin Basto</span>
       </a>
-      <nav aria-label="Principal">
-        <ul class="nav-list">
-          <li><a href="index.html" aria-current="page">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="sr-only">Abrir menú</span>
+      </button>
+
+      <nav id="menu" class="nav" aria-label="Principal">
+        <ul>
+          <li><a href="#infraestructura">Infraestructura</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#metodo">Cómo trabajo</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
+        <button class="theme-toggle" type="button" aria-label="Cambiar a modo oscuro">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <p class="eyebrow">Ingeniero de Sistemas</p>
-        <h1>Hola, soy Elkin</h1>
-        <p class="lead">Diseño, administro y protejo infraestructura TI empresarial. Ahora también construyo para la web.</p>
-        <a class="btn" href="contacto.html">Hablemos</a>
+  <main id="contenido">
+
+    <!-- ================= PORTADA ================= -->
+    <section id="inicio" class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="hero-role">Ingeniero de sistemas, especialista en infraestructura TI</p>
+          <h1 class="hero-name">Elkin<br>Basto</h1>
+          <p class="hero-lead">
+            Mantengo en pie la tecnología que una empresa usa todos los días:
+            la red, los servidores, Microsoft 365 y la seguridad de las instalaciones.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contacto">Escríbeme</a>
+            <a class="btn btn-ghost" href="#proyectos">Ver proyectos</a>
+          </div>
+        </div>
+
+        <!-- Diagrama de red interactivo. Los nodos se crean desde js/main.js -->
+        <figure class="topo-card" aria-labelledby="topo-caption">
+          <div class="topo" id="topo">
+            <svg class="topo-links" id="topo-links" viewBox="0 0 100 75" preserveAspectRatio="none" aria-hidden="true"></svg>
+          </div>
+          <figcaption id="topo-caption" class="topo-hint">Toca un equipo para ver qué hago en esa capa.</figcaption>
+          <div class="topo-detail" id="topo-detail" aria-live="polite"></div>
+        </figure>
       </div>
     </section>
 
-    <section id="servicios" class="section">
-      <div class="container">
-        <h2>Lo que hago</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Infraestructura y redes</h3>
-            <p>Servidores Windows Server, virtualización, Fortinet y conectividad empresarial.</p>
+    <!-- ================= INFRAESTRUCTURA ================= -->
+    <section id="infraestructura" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <h2>Lo que administro</h2>
+          <p>Organizado por capas, de la conexión a internet hasta el puesto de trabajo.</p>
+        </header>
+
+        <div class="layers">
+          <article class="layer" id="capa-red">
+            <h3>Red y perímetro</h3>
+            <p>Firewalls Fortinet, VPN para trabajo remoto, segmentación de la red interna y enlaces dedicados con el proveedor de internet.</p>
+            <ul class="tags"><li>Fortinet</li><li>VPN</li><li>VLAN</li><li>IFX</li></ul>
           </article>
-          <article class="card">
-            <h3>Microsoft 365</h3>
-            <p>Administración, seguridad, automatización con Power Platform y soporte a usuarios.</p>
+
+          <article class="layer" id="capa-servidores">
+            <h3>Servidores y virtualización</h3>
+            <p>Windows Server, directorio de usuarios, máquinas virtuales y respaldos de la información crítica.</p>
+            <ul class="tags"><li>Windows Server</li><li>Active Directory</li><li>Virtualización</li><li>Backups</li></ul>
           </article>
-          <article class="card">
-            <h3>Desarrollo web</h3>
-            <p>Sitios estáticos, control de versiones con Git y publicación en la nube.</p>
+
+          <article class="layer" id="capa-nube">
+            <h3>Nube y colaboración</h3>
+            <p>Microsoft 365 de punta a punta: correo, Teams, SharePoint, licencias, seguridad de cuentas y automatizaciones con Power Platform.</p>
+            <ul class="tags"><li>Microsoft 365</li><li>Exchange Online</li><li>Teams</li><li>SharePoint</li><li>Power Automate</li></ul>
+          </article>
+
+          <article class="layer" id="capa-comunicaciones">
+            <h3>Comunicaciones</h3>
+            <p>Telefonía IP: extensiones, troncales y configuración de equipos para las sedes.</p>
+            <ul class="tags"><li>Telefonía IP</li><li>Troncales SIP</li></ul>
+          </article>
+
+          <article class="layer" id="capa-fisica">
+            <h3>Seguridad física</h3>
+            <p>Videovigilancia Hikvision y control de acceso: cámaras, grabadores, permisos y monitoreo.</p>
+            <ul class="tags"><li>CCTV Hikvision</li><li>iVMS-4200</li><li>Control de acceso</li></ul>
           </article>
         </div>
       </div>
     </section>
+
+    <!-- ================= PROYECTOS ================= -->
+    <section id="proyectos" class="section section-alt">
+      <div class="wrap">
+        <header class="section-head">
+          <h2>Proyectos</h2>
+          <p>Soluciones que he construido para resolver problemas concretos de la operación.</p>
+        </header>
+
+        <ul class="projects" role="list">
+          <li class="project">
+            <h3>Mesa de ayuda en Microsoft 365</h3>
+            <p>Plataforma de tickets para registrar, asignar y hacer seguimiento a las solicitudes de soporte, construida sobre las herramientas que la empresa ya tiene.</p>
+            <ul class="tags"><li>SharePoint</li><li>Power Apps</li><li>Power Automate</li></ul>
+          </li>
+
+          <li class="project">
+            <h3>Monitoreo de Microsoft 365</h3>
+            <p>Visibilidad del estado de los servicios en la nube para enterarse de una falla antes de que llegue como llamada de un usuario.</p>
+            <ul class="tags"><li>Microsoft 365</li><li>Monitoreo</li></ul>
+          </li>
+
+          <li class="project">
+            <h3>Asistente contable en Teams</h3>
+            <p>Chatbot dentro de Microsoft Teams conectado a un modelo de inteligencia artificial, con documentos en SharePoint, para responder consultas del área contable.</p>
+            <ul class="tags"><li>Teams</li><li>IA</li><li>SharePoint</li></ul>
+          </li>
+
+          <li class="project">
+            <h3>Facturación electrónica</h3>
+            <p>Infraestructura para emitir facturación electrónica ante la DIAN, integrada con el ERP de la empresa.</p>
+            <ul class="tags"><li>DIAN</li><li>Siesa</li><li>Integración</li></ul>
+          </li>
+
+          <li class="project">
+            <h3>Este sitio</h3>
+            <p>Hecho a mano en HTML, CSS y JavaScript, con control de versiones en Git y publicado con GitHub Pages.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li></ul>
+            <a class="project-link" href="https://github.com/LeonardoBasto/mi-portafolio" target="_blank" rel="noopener">Ver el código en GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= MÉTODO ================= -->
+    <section id="metodo" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <h2>Cómo trabajo</h2>
+          <p>Tres marcos de referencia que guían el día a día.</p>
+        </header>
+
+        <div class="method">
+          <div class="method-item">
+            <h3>ITIL</h3>
+            <p>Cada solicitud entra por un canal, tiene un responsable y se cierra con registro. Los cambios se planean, se comunican y se pueden revertir.</p>
+          </div>
+          <div class="method-item">
+            <h3>ISO/IEC 27001</h3>
+            <p>Acceso solo a lo necesario, respaldos que se prueban y evidencia lista para cuando llega la auditoría.</p>
+          </div>
+          <div class="method-item">
+            <h3>PMBOK</h3>
+            <p>Alcance, tiempos y riesgos claros antes de empezar, y avances que se pueden medir durante el proyecto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section id="contacto" class="section contact">
+      <div class="wrap contact-grid">
+        <div class="contact-text">
+          <h2>Hablemos</h2>
+          <p>¿Necesitas ordenar tu infraestructura, migrar a Microsoft 365 o automatizar un proceso? Cuéntame qué tienes y qué quieres lograr.</p>
+          <ul class="contact-links">
+            <li><a class="js-email" href="#">Correo</a></li>
+            <li><a href="https://github.com/LeonardoBasto" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+
+        <!-- Por ahora el formulario abre tu programa de correo con el mensaje listo -->
+        <form class="form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="empresa">Empresa <span class="optional">(opcional)</span></label>
+            <input id="empresa" name="empresa" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="mensaje">¿En qué te puedo ayudar?</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
   </main>
 
+  <!-- ================= PIE ================= -->
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Elkin Basto</p>
+    <div class="wrap footer-inner">
+      <p>© <span id="year"></span> Elkin Basto</p>
+      <p>Hecho a mano y publicado con GitHub Pages.</p>
     </div>
   </footer>
 
