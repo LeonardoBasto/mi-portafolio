@@ -1,0 +1,95 @@
+/* =========================================================
+   Páginas de caso de proyecto (proyectos/*.html)
+   Usa la misma paleta y el mismo relieve de styles.css
+   ========================================================= */
+
+/* ----- Portada del caso ----- */
+.caso-hero {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(28px, 5vw, 64px); align-items: center;
+  padding-block: clamp(36px, 6vw, 72px) clamp(28px, 4vw, 48px);
+}
+.volver { display: flex; width: fit-content; align-items: center; gap: 8px; margin-bottom: 22px; color: var(--muted); text-decoration: none; font-weight: 500; font-size: .95rem; }
+.volver .ico { width: 18px; height: 18px; }
+.volver:hover { color: var(--accent-text); }
+.caso-titulo { margin-top: 24px; font-size: clamp(2.8rem, 7vw, 5.6rem); font-weight: 800; letter-spacing: -0.04em; line-height: .98; }
+.caso-portada { margin: 0; padding: 12px; border-radius: 30px; }
+.caso-portada img { width: 100%; height: auto; border-radius: 20px; }
+
+/* ----- Ficha rápida ----- */
+.caso-ficha { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; padding-bottom: clamp(115px, 10vw, 130px); }
+.ficha { padding: 20px 22px; border-radius: 22px; display: grid; gap: 6px; }
+.ficha span { color: var(--muted); font-size: .85rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; }
+.ficha strong { font-weight: 600; line-height: 1.35; }
+
+/* ----- Bloques de texto ----- */
+.caso-zona { padding-bottom: 130px; }
+.dos-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+.bloque { padding: clamp(24px, 3.4vw, 36px); border-radius: 28px; }
+.bloque h2 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 700; margin-top: 8px; }
+.bloque > p:not(.eyebrow) { margin-top: 14px; color: var(--muted); }
+.eyebrow { font-family: var(--mono); font-size: .85rem; font-weight: 600; color: var(--accent-text); text-transform: uppercase; letter-spacing: .08em; }
+.lista { margin: 16px 0 0; padding-left: 1.1em; display: grid; gap: 12px; color: var(--muted); }
+.lista strong { color: var(--text); font-weight: 600; }
+.bloque .stack { margin-top: 20px; }
+.sub-titulo { font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 700; margin: clamp(36px, 5vw, 56px) 0 20px; }
+
+/* ----- Capturas ----- */
+.capturas { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 26px; margin-top: 26px; align-items: start; }
+.captura { margin: 0; padding: 12px; border-radius: 28px; }
+.captura img { width: 100%; height: auto; border-radius: 18px; }
+.captura-alta img { max-height: 620px; object-fit: cover; object-position: top; }
+.captura-ancha { margin-top: 26px; }
+.captura figcaption, .diagrama figcaption { margin: 12px 8px 4px; color: var(--muted); font-size: .92rem; }
+
+/* ----- Diagrama de arquitectura ----- */
+.diagrama { margin: 0; padding: clamp(14px, 2.6vw, 28px); border-radius: 28px; }
+.diagrama-scroll { overflow-x: auto; }
+.diagrama svg { width: 100%; min-width: 640px; height: auto; font-family: var(--body); }
+.dg-nodo rect { fill: var(--bg); stroke: var(--line); stroke-width: 1.5; }
+.dg-nodo text { fill: var(--text); font-size: 17px; font-weight: 600; text-anchor: middle; }
+.dg-nodo .dg-sub { fill: var(--muted); font-size: 13px; font-weight: 500; }
+.dg-acento rect { stroke: var(--accent); stroke-width: 2.2; }
+.dg-zona { fill: none; stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 6 6; }
+.dg-docker { fill: color-mix(in srgb, var(--accent) 6%, transparent); stroke: var(--accent); stroke-width: 1.2; stroke-dasharray: 3 5; }
+.dg-zona-t { fill: var(--muted); font-family: var(--mono); font-size: 13px; font-weight: 600; }
+.dg-flecha { fill: none; stroke: var(--accent); stroke-width: 2; }
+.dg-tenue { stroke-dasharray: 5 5; opacity: .75; }
+.dg-punta { fill: var(--accent); }
+.dg-et { fill: var(--accent-text); font-family: var(--mono); font-size: 12px; font-weight: 600; text-anchor: middle; }
+
+/* ----- Tablas ----- */
+.tabla-caja { padding: 8px clamp(10px, 2vw, 22px); border-radius: 26px; overflow-x: auto; }
+.tabla-caja table { width: 100%; border-collapse: collapse; min-width: 560px; font-size: .97rem; }
+.tabla-caja th, .tabla-caja td { text-align: left; vertical-align: top; padding: 14px 10px; border-bottom: 1px solid var(--line); }
+.tabla-caja tr:last-child td { border-bottom: 0; }
+.tabla-caja th { font-family: var(--mono); font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; }
+.tabla-caja td:first-child { font-weight: 600; width: 30%; }
+.tabla-caja td { color: var(--muted); }
+.tabla-caja td:first-child { color: var(--text); }
+.tabla-caja td:last-child:not(:nth-child(2)) { font-family: var(--mono); font-size: .85rem; white-space: nowrap; color: var(--accent-text); }
+
+/* ----- Tarjeta de proyecto en la página principal ----- */
+.proyectos { display: grid; gap: 26px; }
+.proyecto { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(20px, 4vw, 44px); align-items: center; padding: clamp(14px, 2.4vw, 22px); border-radius: 32px; text-decoration: none; transition: box-shadow .35s, transform .35s; }
+.proyecto:hover { box-shadow: var(--press); transform: translateY(2px); }
+.proyecto img { width: 100%; height: auto; border-radius: 22px; }
+.proyecto-texto { padding: 8px 8px 8px 0; }
+.proyecto-texto h3 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; margin-top: 10px; }
+.proyecto-texto > p:not(.eyebrow) { margin-top: 12px; color: var(--muted); }
+.proyecto .stack { margin-top: 18px; gap: 10px; }
+.proyecto .stack li { font-size: .85rem; padding: 7px 14px; }
+.proyecto-cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; font-weight: 600; color: var(--accent-text); }
+.proyecto-cta .ico { width: 18px; height: 18px; transition: transform .2s; }
+.proyecto:hover .proyecto-cta .ico { transform: translateX(4px); }
+
+/* ----- Responsive ----- */
+@media (max-width: 1000px) {
+  .caso-hero, .proyecto { grid-template-columns: 1fr; }
+  .caso-ficha { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .proyecto-texto { padding: 4px 8px 8px; }
+}
+@media (max-width: 640px) {
+  .caso-ficha, .dos-col, .capturas { grid-template-columns: 1fr; gap: 18px; }
+  .captura-alta img { max-height: 520px; }
+}

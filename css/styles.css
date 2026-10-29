@@ -333,6 +333,7 @@ img, svg { display: block; }
 }
 @media (max-width: 640px) {
   .nav a { padding: 8px 10px; font-size: .88rem; }
+  .site-header .nav a { padding: 8px 8px; font-size: .82rem; }
   .site-header .nav { gap: 7px; }
   .brand span { display: none; }
   .areas, .facts { grid-template-columns: 1fr; gap: 20px; }
@@ -350,4 +351,10 @@ img, svg { display: block; }
   .ticker-track, .t-caret, .contact-ring { animation: none !important; }
   .js [data-intro] .chip, .js [data-intro] .lead, .js [data-intro] .actions, .js [data-intro] .term { opacity: 1; animation: none !important; }
   .js [data-intro] .name .line > span { transform: none; animation: none !important; }
+}
+
+/* Cuatro enlaces en el menú: en celulares muy angostos se compactan */
+@media (max-width: 400px) {
+  .site-header .nav { gap: 5px; }
+  .site-header .nav a { padding: 7px 7px; font-size: .78rem; }
 }

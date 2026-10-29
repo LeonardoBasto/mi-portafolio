@@ -10,9 +10,12 @@ Publicado en: https://leonardobasto.github.io/mi-portafolio/
 mi-portafolio/
 ├── index.html      Página principal (una sola página con secciones)
 ├── contacto.html   Redirige a la sección de contacto
+├── proyectos/      Páginas de caso de cada proyecto (nosfuimos.html)
 ├── css/styles.css  Estilos: colores en el bloque :root al inicio
+├── css/caso.css    Estilos de las páginas de proyecto y de la tarjeta en la portada
 ├── js/main.js      Año automático en el pie de página
 ├── img/logo.svg    Logo e ícono de la pestaña
+├── img/nosfuimos/  Imágenes del caso ¡Nos fuimos!
 ├── README.md       Este archivo
 └── .gitignore      Archivos que Git no debe versionar
 ```

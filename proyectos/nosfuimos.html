@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Nos fuimos! · Caso de proyecto | Elkin Basto</title>
+  <meta name="description" content="Planificador de viajes con IA diseñado, desplegado y operado de punta a punta: arquitectura, seguridad alineada con ISO 27001, cumplimiento de la Ley 1581 y control de costos.">
+  <meta name="theme-color" content="#3B4049">
+  <meta property="og:title" content="¡Nos fuimos!: planificador de viajes con IA">
+  <meta property="og:description" content="Caso de proyecto: arquitectura, seguridad y operación de una app con IA en producción.">
+  <meta property="og:image" content="https://leonardobasto.github.io/mi-portafolio/img/nosfuimos/portada.webp">
+  <link rel="icon" href="../img/logo.svg?v=21" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=22">
+  <link rel="stylesheet" href="../css/caso.css?v=1">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+      <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="bar raised">
+      <a class="brand" href="../index.html"><img src="../img/logo.svg?v=21" alt="" width="32" height="32"><span>Elkin Basto</span></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="../index.html#proyectos">Proyectos</a>
+        <a href="#arquitectura">Arquitectura</a>
+        <a href="#seguridad">Seguridad</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===== Portada del caso ===== -->
+    <section class="caso-hero wrap">
+      <div class="caso-hero-text">
+        <a class="volver" href="../index.html#proyectos"><svg class="ico"><use href="#i-arrow-left"/></svg>Volver a proyectos</a>
+        <p class="chip raised"><span class="led led-ok" aria-hidden="true"></span>Proyecto propio · En producción</p>
+        <h1 class="caso-titulo">¡Nos fuimos!</h1>
+        <p class="lead">Planificador de viajes con <strong>inteligencia artificial</strong> para Colombia y Latinoamérica. Lo diseñé, desplegué y opero de punta a punta: infraestructura, seguridad, IA y producto.</p>
+        <div class="actions">
+          <a class="pill pill-primary" href="https://nosfuimos.com.co" target="_blank" rel="noopener">
+            <span class="pill-ico"><svg class="ico"><use href="#i-external"/></svg></span>Ver la app
+          </a>
+          <a class="pill raised" href="#arquitectura">
+            <span class="pill-ico"><svg class="ico"><use href="#i-layers"/></svg></span>Arquitectura
+          </a>
+        </div>
+      </div>
+      <figure class="caso-portada raised">
+        <img src="../img/nosfuimos/portada.webp" alt="Tarjeta de presentación de ¡Nos fuimos!: tu viaje armado con IA" width="1200" height="630">
+      </figure>
+    </section>
+
+    <!-- ===== Ficha rápida ===== -->
+    <section class="wrap caso-ficha" aria-label="Ficha del proyecto">
+      <div class="ficha raised"><span>Rol</span><strong>Diseño, desarrollo y operación</strong></div>
+      <div class="ficha raised"><span>Estado</span><strong>En producción, con dominio propio</strong></div>
+      <div class="ficha raised"><span>Stack</span><strong>Node.js · Docker · Caddy · API de Claude</strong></div>
+      <div class="ficha raised"><span>Enfoque</span><strong>Seguridad, privacidad y costos</strong></div>
+    </section>
+
+    <!-- ===== Reto y solución ===== -->
+    <div class="zone zone-night caso-zona">
+    <section class="section wrap">
+      <div class="dos-col">
+        <article class="bloque raised">
+          <p class="eyebrow">El reto</p>
+          <h2>Planear un viaje toma horas</h2>
+          <p>Blogs, videos y foros con información dispersa y pensada para otros países. Para viajar por Colombia hacen falta datos locales: buses intermunicipales, lanchas, presupuesto en pesos y, cada vez más, viajar con mascota.</p>
+        </article>
+        <article class="bloque raised">
+          <p class="eyebrow">La solución</p>
+          <h2>Un itinerario completo en segundos</h2>
+          <p>El viajero indica origen, destino, días, presupuesto y gustos. La IA devuelve un plan día por día con horarios, costos estimados, mapa, cómo llegar y consejos, listo para compartir por WhatsApp.</p>
+        </article>
+      </div>
+
+      <div class="capturas">
+        <figure class="captura raised">
+          <img src="../img/nosfuimos/inicio.webp" alt="Pantalla de inicio con el formulario tipo pase de viaje" width="1280" height="800" loading="lazy">
+          <figcaption>Formulario tipo "pase de viaje": pocos pasos y fácil de usar a cualquier edad.</figcaption>
+        </figure>
+        <figure class="captura captura-alta raised">
+          <img src="../img/nosfuimos/itinerario.webp" alt="Itinerario del día 1 con horarios, costos y tipo de actividad" width="716" height="1500" loading="lazy">
+          <figcaption>Itinerario por días en formato de tiquete, pensado primero para el celular.</figcaption>
+        </figure>
+      </div>
+    </section>
+    </div>
+
+    <!-- ===== Arquitectura ===== -->
+    <div class="zone zone-light">
+    <section id="arquitectura" class="section wrap">
+      <header class="section-head">
+        <h2 class="section-title">Arquitectura</h2>
+        <p>Una sola puerta de entrada con HTTPS y la aplicación aislada en su contenedor.</p>
+      </header>
+
+      <figure class="diagrama raised">
+        <div class="diagrama-scroll"><svg viewBox="0 0 900 430" role="img" aria-labelledby="dg-t dg-d">
+          <title id="dg-t">Diagrama de arquitectura de ¡Nos fuimos!</title>
+          <desc id="dg-d">El navegador resuelve el dominio en Cloudflare y llega por HTTPS a Caddy en un VPS Linux. Caddy envía el tráfico al contenedor de la aplicación, que guarda los datos en SQLite con respaldo diario y consulta la API de Claude. GitHub despliega el código con una llave de solo lectura.</desc>
+          <defs>
+            <marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="dg-punta"/></marker>
+          </defs>
+          <!-- Usuario y DNS -->
+          <g class="dg-nodo"><rect x="20" y="40" width="160" height="70" rx="16"/><text x="100" y="70">Viajero</text><text x="100" y="92" class="dg-sub">navegador · WhatsApp</text></g>
+          <g class="dg-nodo"><rect x="20" y="180" width="160" height="70" rx="16"/><text x="100" y="210">Cloudflare</text><text x="100" y="232" class="dg-sub">DNS del dominio</text></g>
+          <!-- VPS -->
+          <rect x="230" y="20" width="460" height="390" rx="24" class="dg-zona"/>
+          <text x="250" y="48" class="dg-zona-t">VPS Linux · firewall ufw · fail2ban</text>
+          <g class="dg-nodo dg-acento"><rect x="260" y="70" width="180" height="76" rx="16"/><text x="350" y="102">Caddy</text><text x="350" y="124" class="dg-sub">HTTPS automático</text></g>
+          <rect x="260" y="180" width="400" height="200" rx="18" class="dg-docker"/>
+          <text x="280" y="206" class="dg-zona-t">Docker</text>
+          <g class="dg-nodo"><rect x="290" y="222" width="190" height="76" rx="16"/><text x="385" y="254">App Node.js</text><text x="385" y="276" class="dg-sub">Express · sin root</text></g>
+          <g class="dg-nodo"><rect x="290" y="314" width="190" height="54" rx="14"/><text x="385" y="346">SQLite (volumen)</text></g>
+          <g class="dg-nodo"><rect x="500" y="222" width="140" height="76" rx="16"/><text x="570" y="254">Otra app</text><text x="570" y="276" class="dg-sub">mismo proxy</text></g>
+          <g class="dg-nodo"><rect x="500" y="314" width="140" height="54" rx="14"/><text x="570" y="346">Respaldo diario</text></g>
+          <!-- Externos -->
+          <g class="dg-nodo dg-acento"><rect x="730" y="190" width="150" height="76" rx="16"/><text x="805" y="222">API de Claude</text><text x="805" y="244" class="dg-sub">JSON con esquema</text></g>
+          <g class="dg-nodo"><rect x="730" y="70" width="150" height="76" rx="16"/><text x="805" y="102">GitHub</text><text x="805" y="124" class="dg-sub">llave solo lectura</text></g>
+          <g class="dg-nodo"><rect x="730" y="314" width="150" height="54" rx="14"/><text x="805" y="346">Aliados (afiliados)</text></g>
+          <!-- Flechas -->
+          <path d="M100 110v70" class="dg-flecha" marker-end="url(#fl)"/>
+          <path d="M180 75h80" class="dg-flecha" marker-end="url(#fl)"/>
+          <text x="220" y="66" class="dg-et">443</text>
+          <path d="M350 146v76" class="dg-flecha" marker-end="url(#fl)"/>
+          <path d="M440 120h120v102" class="dg-flecha dg-tenue" marker-end="url(#fl)"/>
+          <path d="M385 298v16" class="dg-flecha" marker-end="url(#fl)"/>
+          <path d="M480 341h20" class="dg-flecha dg-tenue" marker-end="url(#fl)"/>
+          <path d="M440 222V164H805V190" class="dg-flecha" marker-end="url(#fl)"/>
+          <path d="M730 108h-40" class="dg-flecha dg-tenue" marker-end="url(#fl)"/>
+          <path d="M480 280H490V394H805V368" class="dg-flecha dg-tenue" marker-end="url(#fl)"/>
+        </svg></div>
+        <figcaption>La aplicación solo escucha en el propio servidor. Desde internet únicamente se llega por Caddy con HTTPS, y el mismo proxy publica otra aplicación sin interferir con ella.</figcaption>
+      </figure>
+
+      <h3 class="sub-titulo">Decisiones técnicas</h3>
+      <div class="tabla-caja raised">
+        <table>
+          <thead><tr><th>Decisión</th><th>Por qué</th></tr></thead>
+          <tbody>
+            <tr><td>Salida de la IA con esquema JSON estricto y validación en el servidor</td><td>La respuesta siempre tiene la forma esperada; ningún dato llega a la pantalla sin revisar rangos y tipos.</td></tr>
+            <tr><td>Selección de modelo por costo</td><td>El modelo se cambia con una variable. El panel muestra el costo por itinerario para decidir con datos.</td></tr>
+            <tr><td>Node.js + SQLite en un VPS</td><td>Bajo costo y pocas piezas que mantener para la etapa de validación.</td></tr>
+            <tr><td>Proxy compartido con otra aplicación</td><td>Un solo punto de entrada con TLS; cada app en su red de contenedores, sin un segundo proxy.</td></tr>
+            <tr><td>Vista previa generada en el servidor</td><td>Los enlaces compartidos por WhatsApp muestran título, destino e imagen sin depender de JavaScript.</td></tr>
+            <tr><td>Medición propia, sin servicios externos</td><td>Métricas de visitas, conversión, calificación y costo sin cookies ni scripts de terceros.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== Seguridad ===== -->
+    <section id="seguridad" class="section wrap">
+      <header class="section-head">
+        <h2 class="section-title">Seguridad y cumplimiento</h2>
+        <p>Controles pensados desde el diseño, con referencia al Anexo A de ISO/IEC 27001:2022.</p>
+      </header>
+      <div class="tabla-caja raised">
+        <table>
+          <thead><tr><th>Control</th><th>Implementación</th><th>Ref.</th></tr></thead>
+          <tbody>
+            <tr><td>Seguridad de redes</td><td>Firewall que solo expone 80/443; la app escucha en 127.0.0.1; protección contra fuerza bruta en SSH.</td><td>A.8.20</td></tr>
+            <tr><td>Configuración segura</td><td>Contenedor sin privilegios de root; política de seguridad de contenido estricta; cabeceras de seguridad y HSTS.</td><td>A.8.9</td></tr>
+            <tr><td>Gestión de secretos</td><td>Llaves fuera del repositorio, una por ambiente, con rotación; despliegue con llave de solo lectura.</td><td>A.5.17 · A.8.4</td></tr>
+            <tr><td>Respaldo</td><td>Copia diaria consistente, verificada con chequeo de integridad, comprimida y con 30 días de retención.</td><td>A.8.13</td></tr>
+            <tr><td>Monitoreo</td><td>Chequeo de salud del contenedor y panel de administración con sesión firmada y bloqueo por intentos.</td><td>A.8.16</td></tr>
+            <tr><td>Privacidad (Ley 1581)</td><td>Política de tratamiento de datos, autorización explícita, visitas medidas de forma anónima y viajes fuera de los buscadores.</td><td>A.5.34</td></tr>
+            <tr><td>Control de costos</td><td>Límite de itinerarios por persona y por día, y tope de gasto mensual en la API.</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure class="captura captura-ancha raised">
+        <img src="../img/nosfuimos/panel.webp" alt="Panel de administración con visitantes, viajes, clics, costo de IA y metas de validación" width="1280" height="1180" loading="lazy">
+        <figcaption>Panel de administración propio: visitas, conversión, calificación, costo por itinerario y metas de validación. <em>Imagen con datos de prueba.</em></figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== Stack y aprendizajes ===== -->
+    <section class="section wrap">
+      <div class="dos-col">
+        <article class="bloque raised">
+          <p class="eyebrow">Tecnologías</p>
+          <h2>Stack</h2>
+          <ul class="stack">
+            <li>Node.js</li><li>Express</li><li>SQLite</li><li>Docker Compose</li><li>Caddy</li><li>Ubuntu Server</li><li>Cloudflare DNS</li><li>API de Claude</li><li>Leaflet + OpenStreetMap</li><li>Git y GitHub</li>
+          </ul>
+        </article>
+        <article class="bloque raised">
+          <p class="eyebrow">Lo que aprendí</p>
+          <h2>Aprendizajes</h2>
+          <ul class="lista">
+            <li><strong>La IA en producción es un componente más</strong>: necesita contrato de datos, validación, límites y control de costos.</li>
+            <li><strong>La seguridad es más barata al inicio</strong>: secretos, respaldos y exposición mínima se definieron antes del primer usuario.</li>
+            <li><strong>Medir antes de escalar</strong>: metas claras de validación para decidir con datos y no con intuición.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="contact-ring">
+        <div class="contact raised">
+          <h2>¿Hablamos?</h2>
+          <p>Infraestructura, seguridad o proyectos con IA: cuéntame qué necesitas.</p>
+          <div class="actions">
+            <a class="pill pill-primary" href="https://www.linkedin.com/in/elkin-leonardo-basto-27083b202" target="_blank" rel="noopener">
+              <span class="pill-ico"><svg class="ico"><use href="#i-user"/></svg></span>LinkedIn
+            </a>
+            <a class="pill raised" href="../index.html#proyectos">
+              <span class="pill-ico"><svg class="ico"><use href="#i-arrow-left"/></svg></span>Más proyectos
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <footer class="zone zone-light zone-foot">
+    <div class="footer wrap">
+      <p>© <span id="year">2026</span> Elkin Basto. Hecho a mano y publicado con GitHub Pages.</p>
+      <a class="to-top raised" href="#contenido" aria-label="Volver arriba"><svg class="ico"><use href="#i-arrow-up"/></svg></a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const h = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => h.classList.toggle('is-scrolled', window.scrollY > 24), { passive: true });
+  </script>
+</body>
+</html>
