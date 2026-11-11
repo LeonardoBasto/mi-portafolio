@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css?v=22">
-  <link rel="stylesheet" href="css/caso.css?v=1">
+  <link rel="stylesheet" href="css/caso.css?v=2">
   <!-- Marca que JavaScript está activo (para las animaciones de entrada) -->
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -56,8 +56,8 @@
       <a class="brand" href="#inicio"><img src="img/logo.svg?v=21" alt="" width="32" height="32"><span>Elkin Basto</span></a>
       <nav class="nav" aria-label="Principal">
         <a href="#areas">Áreas</a>
-        <a href="#trayectoria">Trayectoria</a>
         <a href="#proyectos">Proyectos</a>
+        <a href="#trayectoria">Trayectoria</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
@@ -162,6 +162,45 @@
 
     <!-- ===== Zona 3: arena clara ===== -->
     <div class="zone zone-light">
+    <!-- ===== Proyectos ===== -->
+    <section id="proyectos" class="section wrap">
+      <header class="section-head">
+        <h2 class="section-title">Proyectos</h2>
+        <p>Lo que construyo y opero, de la infraestructura al producto.</p>
+      </header>
+      <div class="proyectos">
+        <a class="proyecto raised" href="proyectos/centro-control-ti.html">
+          <img src="img/centro-ti/portada.webp" alt="Centro de control TI: actividades, mantenimiento preventivo e indicadores en Microsoft 365" width="1200" height="630" loading="lazy">
+          <div class="proyecto-texto">
+            <p class="eyebrow">Proyecto laboral · En uso diario</p>
+            <h3>Centro de control TI</h3>
+            <p>App en SharePoint Online que reemplazó un Excel de pendientes: actividades con prioridad ITIL, mantenimiento preventivo por sede con actas en PDF, indicadores e informes de gestión, con controles de ISO 27001.</p>
+            <ul class="stack"><li>SharePoint</li><li>SPFx</li><li>TypeScript</li><li>Power Automate</li></ul>
+            <span class="proyecto-cta">Ver el caso<svg class="ico"><use href="#i-arrow-right"/></svg></span>
+          </div>
+        </a>
+        <article class="proyecto raised">
+          <img src="img/proyecto-inspeccion.webp" alt="Tablero de la aplicación de inspección: puntaje promedio, hallazgos críticos, puntaje por sede y madurez por área" width="1200" height="750" loading="lazy">
+          <div class="proyecto-texto">
+            <p class="eyebrow">Proyecto propio · En producción</p>
+            <h3>Inspección de infraestructura de TI</h3>
+            <p>Aplicación web para inspeccionar sedes en tres frentes, física, técnica y Microsoft 365, con 49 puntos de control alineados con ISO/IEC 27001:2022. Calcula un puntaje por sede, prioriza los hallazgos críticos y deja registro de auditoría. Publicada en un VPS Linux endurecido, con Docker, HTTPS automático y respaldos diarios.</p>
+            <ul class="stack"><li>Node.js</li><li>Express</li><li>SQLite</li><li>Docker</li><li>Caddy</li></ul>
+          </div>
+        </article>
+        <a class="proyecto raised" href="proyectos/nosfuimos.html">
+          <img src="img/nosfuimos/portada.webp" alt="¡Nos fuimos!: tu viaje armado con IA" width="1200" height="630" loading="lazy">
+          <div class="proyecto-texto">
+            <p class="eyebrow">Proyecto propio · En producción</p>
+            <h3>¡Nos fuimos!</h3>
+            <p>Planificador de viajes con IA para Colombia y Latinoamérica: diseño, despliegue y operación en un VPS Linux con Docker, HTTPS, controles alineados con ISO 27001 y cumplimiento de la Ley 1581.</p>
+            <ul class="stack"><li>Node.js</li><li>Docker</li><li>Caddy</li><li>IA generativa</li></ul>
+            <span class="proyecto-cta">Ver el caso<svg class="ico"><use href="#i-arrow-right"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </section>
+
     <section id="trayectoria" class="section wrap">
       <header class="section-head">
         <h2 class="section-title">Trayectoria</h2>
@@ -184,35 +223,6 @@
 
     </section>
 
-    <!-- ===== Proyectos ===== -->
-    <section id="proyectos" class="section wrap">
-      <header class="section-head">
-        <h2 class="section-title">Proyectos</h2>
-        <p>Lo que construyo y opero por mi cuenta, de la infraestructura al producto.</p>
-      </header>
-      <div class="proyectos">
-        <a class="proyecto raised" href="proyectos/nosfuimos.html">
-          <img src="img/nosfuimos/portada.webp" alt="¡Nos fuimos!: tu viaje armado con IA" width="1200" height="630" loading="lazy">
-          <div class="proyecto-texto">
-            <p class="eyebrow">Proyecto propio · En producción</p>
-            <h3>¡Nos fuimos!</h3>
-            <p>Planificador de viajes con IA para Colombia y Latinoamérica: diseño, despliegue y operación en un VPS Linux con Docker, HTTPS, controles alineados con ISO 27001 y cumplimiento de la Ley 1581.</p>
-            <ul class="stack"><li>Node.js</li><li>Docker</li><li>Caddy</li><li>IA generativa</li></ul>
-            <span class="proyecto-cta">Ver el caso<svg class="ico"><use href="#i-arrow-right"/></svg></span>
-          </div>
-        </a>
-        <a class="proyecto raised" href="proyectos/centro-control-ti.html">
-          <img src="img/centro-ti/portada.webp" alt="Centro de control TI: actividades, mantenimiento preventivo e indicadores en Microsoft 365" width="1200" height="630" loading="lazy">
-          <div class="proyecto-texto">
-            <p class="eyebrow">Proyecto laboral · En uso diario</p>
-            <h3>Centro de control TI</h3>
-            <p>App en SharePoint Online que reemplazó un Excel de pendientes: actividades con prioridad ITIL, mantenimiento preventivo por sede con actas en PDF, indicadores e informes de gestión, con controles de ISO 27001.</p>
-            <ul class="stack"><li>SharePoint</li><li>SPFx</li><li>TypeScript</li><li>Power Automate</li></ul>
-            <span class="proyecto-cta">Ver el caso<svg class="ico"><use href="#i-arrow-right"/></svg></span>
-          </div>
-        </a>
-      </div>
-    </section>
 
     <!-- ===== Contacto ===== -->
     <section id="contacto" class="section wrap">
