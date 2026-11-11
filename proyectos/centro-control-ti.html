@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro de control TI · Caso de proyecto | Elkin Basto</title>
+  <meta name="description" content="App en SharePoint Online para gestionar las actividades, el mantenimiento preventivo y los indicadores de un área de TI, con buenas prácticas de ITIL e ISO 27001.">
+  <meta name="theme-color" content="#3B4049">
+  <meta property="og:title" content="Centro de control TI: actividades, mantenimiento e indicadores en Microsoft 365">
+  <meta property="og:description" content="Caso de proyecto: de un Excel de pendientes a una app con prioridad ITIL, mantenimiento preventivo, actas e informes de gestión.">
+  <meta property="og:image" content="https://leonardobasto.github.io/mi-portafolio/img/centro-ti/portada.webp">
+  <link rel="icon" href="../img/logo.svg?v=21" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=22">
+  <link rel="stylesheet" href="../css/caso.css?v=2">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+      <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v6c0 4.5 3.2 7.8 7.5 9 4.3-1.2 7.5-4.5 7.5-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="bar raised">
+      <a class="brand" href="../index.html"><img src="../img/logo.svg?v=21" alt="" width="32" height="32"><span>Elkin Basto</span></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="../index.html#proyectos">Proyectos</a>
+        <a href="#modulos">Módulos</a>
+        <a href="#seguridad">Seguridad</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===== Portada del caso ===== -->
+    <section class="caso-hero wrap">
+      <div class="caso-hero-text">
+        <a class="volver" href="../index.html#proyectos"><svg class="ico"><use href="#i-arrow-left"/></svg>Volver a proyectos</a>
+        <p class="chip raised"><span class="led led-ok" aria-hidden="true"></span>Proyecto laboral · En uso diario</p>
+        <h1 class="caso-titulo">Centro de control TI</h1>
+        <p class="lead">App dentro de <strong>SharePoint Online</strong> para que un área de TI gestione sus actividades, el <strong>mantenimiento preventivo</strong> de sus sedes y sus <strong>indicadores</strong>, con prioridad según ITIL y controles de ISO 27001. La diseñé y desarrollé de punta a punta, y la mejoro con el equipo que la usa.</p>
+        <div class="actions">
+          <a class="pill pill-primary" href="#modulos">
+            <span class="pill-ico"><svg class="ico"><use href="#i-layers"/></svg></span>Ver módulos
+          </a>
+          <a class="pill raised" href="#seguridad">
+            <span class="pill-ico"><svg class="ico"><use href="#i-shield"/></svg></span>Seguridad
+          </a>
+        </div>
+      </div>
+      <figure class="caso-portada raised">
+        <img src="../img/centro-ti/portada.webp" alt="Centro de control TI: actividades, mantenimiento preventivo e indicadores en Microsoft 365" width="1200" height="630">
+      </figure>
+    </section>
+
+    <!-- ===== Ficha rápida ===== -->
+    <section class="wrap caso-ficha" aria-label="Ficha del proyecto">
+      <div class="ficha raised"><span>Rol</span><strong>Análisis, diseño, desarrollo y despliegue</strong></div>
+      <div class="ficha raised"><span>Estado</span><strong>En uso por el equipo de TI</strong></div>
+      <div class="ficha raised"><span>Stack</span><strong>SPFx · TypeScript · SharePoint REST · Power Automate</strong></div>
+      <div class="ficha raised"><span>Enfoque</span><strong>ITIL, ISO 27001 y datos dentro de Microsoft 365</strong></div>
+    </section>
+
+    <!-- ===== Reto y solución ===== -->
+    <div class="zone zone-night caso-zona">
+    <section class="section wrap">
+      <div class="dos-col">
+        <article class="bloque raised">
+          <p class="eyebrow">El reto</p>
+          <h2>Un Excel que nadie podía auditar</h2>
+          <p>Las tareas del área se llevaban en una hoja de cálculo: sin historial de cambios, sin saber quién hizo qué, sin prioridades claras y sin indicadores. El mantenimiento preventivo de las sedes no tenía un formato propio ni evidencia, y armar el informe mensual tomaba horas.</p>
+        </article>
+        <article class="bloque raised">
+          <p class="eyebrow">La solución</p>
+          <h2>Una app a la medida, dentro del mismo Microsoft 365</h2>
+          <p>Un componente web de SharePoint publicado como aplicación de página completa. Los datos viven en listas del propio tenant, con permisos, versiones y adjuntos, sin servidores ni licencias adicionales. Se migró el histórico del Excel y hoy el equipo registra, asigna, cierra y reporta desde la app.</p>
+        </article>
+      </div>
+
+      <div class="capturas capturas-pares">
+        <figure class="captura raised">
+          <img src="../img/centro-ti/resumen.webp" alt="Pantalla de resumen con actividades abiertas, vencidas, críticas y avance general" width="1280" height="800" loading="lazy">
+          <figcaption>Resumen del día: lo vencido y lo que vence primero, avance general y carga de trabajo por persona.</figcaption>
+        </figure>
+        <figure class="captura raised">
+          <img src="../img/centro-ti/actividad.webp" alt="Formulario de actividad con impacto, urgencia y prioridad calculada" width="1280" height="800" loading="lazy">
+          <figcaption>La prioridad se calcula con la matriz impacto × urgencia de ITIL y sugiere la fecha límite.</figcaption>
+        </figure>
+      </div>
+    </section>
+    </div>
+
+    <!-- ===== Módulos ===== -->
+    <div class="zone zone-light">
+    <section id="modulos" class="section wrap">
+      <header class="section-head">
+        <h2 class="section-title">Módulos</h2>
+        <p>Cuatro piezas que comparten los mismos datos y el mismo estilo.</p>
+      </header>
+      <div class="dos-col">
+        <article class="bloque raised">
+          <p class="eyebrow">Gestión del trabajo</p>
+          <h2>Actividades</h2>
+          <ul class="lista">
+            <li>Tipos de trabajo de ITIL: incidente, requerimiento, cambio y proyecto.</li>
+            <li>Prioridad por impacto × urgencia y plazo sugerido según la prioridad.</li>
+            <li>Tablero, lista con filtros y orden por columnas, y vista "Mi semana".</li>
+            <li>Asignación a varias personas con aviso por correo y bitácora de seguimiento que no se puede borrar.</li>
+            <li>Evidencia fotográfica del trabajo terminado.</li>
+          </ul>
+        </article>
+        <article class="bloque raised">
+          <p class="eyebrow">Plan preventivo</p>
+          <h2>Mantenimientos</h2>
+          <ul class="lista">
+            <li>Un formato por visita a la sede, con todos los tipos de equipo: cámaras, red, UPS, servidores, licencias y más.</li>
+            <li>Lista de chequeo Cumple / No cumple / N/A, con observación obligatoria en cada falla.</li>
+            <li>Hasta 10 fotos por visita y equipo de trabajo con firma de cada integrante.</li>
+            <li>Al cerrar: crea el pendiente correctivo de cada hallazgo y programa la siguiente visita según la frecuencia.</li>
+            <li>Acta en PDF lista para firmar, o en blanco para llenarla en campo.</li>
+          </ul>
+        </article>
+        <article class="bloque raised">
+          <p class="eyebrow">Medición</p>
+          <h2>Indicadores</h2>
+          <ul class="lista">
+            <li>Cumplimiento a tiempo, ciclo promedio de cierre y carga por responsable.</li>
+            <li>Cumplimiento del mantenimiento preventivo contra una meta, por mes y por sede.</li>
+            <li>Gráficas con colores aptos para daltonismo, detalle al pasar el mouse y tabla de datos.</li>
+          </ul>
+        </article>
+        <article class="bloque raised">
+          <p class="eyebrow">Rendición de cuentas</p>
+          <h2>Informe de gestión</h2>
+          <ul class="lista">
+            <li>PDF con portada, resumen ejecutivo, actividades realizadas, mantenimiento, alertas y firmas.</li>
+            <li>De un mes o de varios meses, con la evolución mes a mes.</li>
+            <li>Registro fotográfico tomado de la evidencia que el equipo ya subió.</li>
+          </ul>
+        </article>
+      </div>
+
+      <figure class="captura captura-ancha raised">
+        <img src="../img/centro-ti/mantenimiento.webp" alt="Indicadores y gráficas del mantenimiento preventivo: cumplimiento por mes, resultado de los puntos, novedades por tipo de equipo y cumplimiento por sede" width="1280" height="972" loading="lazy">
+        <figcaption>Mantenimiento preventivo: cumplimiento contra la meta por mes, resultado de los puntos revisados, novedades por tipo de equipo y sedes atrasadas. <em>Imagen con datos de prueba.</em></figcaption>
+      </figure>
+      <figure class="captura captura-ancha raised">
+        <img src="../img/centro-ti/visita.webp" alt="Formato de visita con la lista de chequeo Cumple, No cumple y N/A por tipo de equipo" width="1280" height="800" loading="lazy">
+        <figcaption>Formato de visita: cada tipo de equipo con su avance y su lista de chequeo. <em>Imagen con datos de prueba.</em></figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== Arquitectura ===== -->
+    <section id="arquitectura" class="section wrap">
+      <header class="section-head">
+        <h2 class="section-title">Arquitectura</h2>
+        <p>Todo corre dentro del tenant de Microsoft 365: sin servidores propios ni datos fuera de la organización.</p>
+      </header>
+
+      <figure class="diagrama raised">
+        <div class="diagrama-scroll"><svg viewBox="0 0 900 430" role="img" aria-labelledby="dg-t dg-d">
+          <title id="dg-t">Diagrama de arquitectura del Centro de control TI</title>
+          <desc id="dg-d">El usuario entra con su cuenta de Microsoft Entra ID a una página de SharePoint Online. La página carga un componente SPFx escrito en TypeScript que lee y escribe por la API REST en dos listas: actividades y mantenimientos, con permisos propios, versiones y adjuntos. Un flujo de Power Automate envía los avisos de asignación por correo de Exchange Online.</desc>
+          <defs>
+            <marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="dg-punta"/></marker>
+          </defs>
+          <g class="dg-nodo"><rect x="20" y="40" width="160" height="70" rx="16"/><text x="100" y="70">Equipo de TI</text><text x="100" y="92" class="dg-sub">navegador · celular</text></g>
+          <g class="dg-nodo"><rect x="20" y="180" width="160" height="70" rx="16"/><text x="100" y="210">Entra ID</text><text x="100" y="232" class="dg-sub">identidad · MFA</text></g>
+          <rect x="230" y="20" width="460" height="390" rx="24" class="dg-zona"/>
+          <text x="250" y="48" class="dg-zona-t">Tenant de Microsoft 365 · SharePoint Online</text>
+          <g class="dg-nodo dg-acento"><rect x="260" y="70" width="190" height="76" rx="16"/><text x="355" y="102">Página de la app</text><text x="355" y="124" class="dg-sub">página completa</text></g>
+          <g class="dg-nodo dg-acento"><rect x="470" y="70" width="190" height="76" rx="16"/><text x="565" y="102">Componente SPFx</text><text x="565" y="124" class="dg-sub">TypeScript</text></g>
+          <rect x="260" y="180" width="400" height="200" rx="18" class="dg-docker"/>
+          <text x="280" y="206" class="dg-zona-t">Listas</text>
+          <g class="dg-nodo"><rect x="290" y="222" width="170" height="76" rx="16"/><text x="375" y="254">Actividades</text><text x="375" y="276" class="dg-sub">versiones · fotos</text></g>
+          <g class="dg-nodo"><rect x="480" y="222" width="160" height="76" rx="16"/><text x="560" y="254">Mantenimientos</text><text x="560" y="276" class="dg-sub">checklist · fotos</text></g>
+          <g class="dg-nodo"><rect x="290" y="314" width="350" height="54" rx="14"/><text x="465" y="346">Historial de versiones · papelera de reciclaje</text></g>
+          <g class="dg-nodo dg-acento"><rect x="730" y="190" width="150" height="76" rx="16"/><text x="805" y="222">Power Automate</text><text x="805" y="244" class="dg-sub">aviso de asignación</text></g>
+          <g class="dg-nodo"><rect x="730" y="314" width="150" height="54" rx="14"/><text x="805" y="346">Correo Outlook</text></g>
+          <path d="M100 110v70" class="dg-flecha" marker-end="url(#fl)"/>
+          <path d="M180 75h80" class="dg-flecha" marker-end="url(#fl)"/>
+          <text x="220" y="66" class="dg-et">HTTPS</text>
+          <path d="M450 108h20" class="dg-flecha" marker-end="url(#fl)"/>
+          <path d="M565 146v20H375v56" class="dg-flecha" marker-end="url(#fl)"/>
+          <path d="M565 166v56" class="dg-flecha" marker-end="url(#fl)"/>
+          <text x="590" y="172" class="dg-et">REST</text>
+          <path d="M640 260h90" class="dg-flecha dg-tenue" marker-end="url(#fl)"/>
+          <path d="M805 266v48" class="dg-flecha" marker-end="url(#fl)"/>
+        </svg></div>
+        <figcaption>La app no guarda credenciales ni llama servicios externos: usa la sesión del usuario en SharePoint, y los correos los envía un flujo de la propia organización.</figcaption>
+      </figure>
+
+      <h3 class="sub-titulo">Decisiones técnicas</h3>
+      <div class="tabla-caja raised">
+        <table>
+          <thead><tr><th>Decisión</th><th>Por qué</th></tr></thead>
+          <tbody>
+            <tr><td>SPFx en lugar de Power Apps</td><td>Diseño a la medida, carga rápida, impresión a PDF y sin licencias premium por usuario.</td></tr>
+            <tr><td>Listas de SharePoint como base de datos</td><td>Permisos, versiones, adjuntos y respaldo nativos de Microsoft 365, sin infraestructura adicional.</td></tr>
+            <tr><td>Correo con Power Automate</td><td>Se evita dar a la app permiso de enviar correo a nombre de cualquier usuario del tenant.</td></tr>
+            <tr><td>Bitácora sobre el historial de versiones</td><td>Cada nota queda con autor y fecha, y no se puede editar ni borrar después.</td></tr>
+            <tr><td>Mantenimiento en una lista aparte</td><td>No se mezclan las tareas del día a día con el plan preventivo; cada uno tiene sus indicadores.</td></tr>
+            <tr><td>Entregas pequeñas y frecuentes</td><td>Más de 20 versiones en pocas semanas, cada una probada antes de publicarla y ajustada con lo que pedía el equipo.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== Seguridad ===== -->
+    <section id="seguridad" class="section wrap">
+      <header class="section-head">
+        <h2 class="section-title">Seguridad y control</h2>
+        <p>Controles con referencia al Anexo A de ISO/IEC 27001:2022.</p>
+      </header>
+      <div class="tabla-caja raised">
+        <table>
+          <thead><tr><th>Control</th><th>Implementación</th><th>Ref.</th></tr></thead>
+          <tbody>
+            <tr><td>Control de acceso</td><td>Las listas tienen permisos propios: solo el equipo de TI ve los datos; el resto de la organización no tiene acceso.</td><td>A.5.15 · A.8.3</td></tr>
+            <tr><td>Mínimo privilegio</td><td>Rol a la medida: ver, agregar y editar, sin eliminar. Cada persona edita lo que creó o tiene asignado.</td><td>A.5.18 · A.8.2</td></tr>
+            <tr><td>Trazabilidad</td><td>Cada actividad muestra quién y cuándo la registró; el historial de versiones conserva cada cambio.</td><td>A.8.15</td></tr>
+            <tr><td>Protección de registros</td><td>Bitácora de seguimiento de solo agregar y borrado a la papelera, nunca permanente desde la app.</td><td>A.5.33</td></tr>
+            <tr><td>Desarrollo seguro</td><td>Sin secretos en el código, texto del usuario siempre escapado y revisión de calidad de datos antes de cada versión.</td><td>A.8.25 · A.8.28</td></tr>
+            <tr><td>Continuidad</td><td>Código fuente custodiado por la organización e historial con suficientes versiones para no perder notas.</td><td>A.8.13</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== Stack y aprendizajes ===== -->
+    <section class="section wrap">
+      <div class="dos-col">
+        <article class="bloque raised">
+          <p class="eyebrow">Tecnologías</p>
+          <h2>Stack</h2>
+          <ul class="stack">
+            <li>SharePoint Online</li><li>SPFx</li><li>TypeScript</li><li>API REST de SharePoint</li><li>Power Automate</li><li>Microsoft Entra ID</li><li>HTML y CSS</li><li>SVG</li><li>Playwright (pruebas)</li>
+          </ul>
+        </article>
+        <article class="bloque raised">
+          <p class="eyebrow">Lo que aprendí</p>
+          <h2>Aprendizajes</h2>
+          <ul class="lista">
+            <li><strong>La herramienta tiene que seguir el trabajo real</strong>: el formato de mantenimiento cambió a una visita por sede porque así se trabaja en campo.</li>
+            <li><strong>Un indicador vale lo que valen sus datos</strong>: se marcaron los registros migrados del Excel para no medir lo que no se midió.</li>
+            <li><strong>Usar lo que ya se paga</strong>: Microsoft 365 resolvió seguridad, respaldo e identidad sin infraestructura nueva.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="contact-ring">
+        <div class="contact raised">
+          <h2>¿Hablamos?</h2>
+          <p>Infraestructura, Microsoft 365 o herramientas a la medida para tu área de TI.</p>
+          <div class="actions">
+            <a class="pill pill-primary" href="https://www.linkedin.com/in/elkin-leonardo-basto-27083b202" target="_blank" rel="noopener">
+              <span class="pill-ico"><svg class="ico"><use href="#i-user"/></svg></span>LinkedIn
+            </a>
+            <a class="pill raised" href="../index.html#proyectos">
+              <span class="pill-ico"><svg class="ico"><use href="#i-arrow-left"/></svg></span>Más proyectos
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <footer class="zone zone-light zone-foot">
+    <div class="footer wrap">
+      <p>© <span id="year">2026</span> Elkin Basto. Hecho a mano y publicado con GitHub Pages.</p>
+      <a class="to-top raised" href="#contenido" aria-label="Volver arriba"><svg class="ico"><use href="#i-arrow-up"/></svg></a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const h = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => h.classList.toggle('is-scrolled', window.scrollY > 24), { passive: true });
+  </script>
+</body>
+</html>
