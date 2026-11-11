@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=21">
+  <link rel="stylesheet" href="css/styles.css?v=22">
   <!-- Marca que JavaScript está activo (para las animaciones de entrada) -->
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -54,6 +54,7 @@
       <a class="brand" href="#inicio"><img src="img/logo.svg?v=21" alt="" width="32" height="32"><span>Elkin Basto</span></a>
       <nav class="nav" aria-label="Principal">
         <a href="#areas">Áreas</a>
+        <a href="#proyectos">Proyectos</a>
         <a href="#trayectoria">Trayectoria</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -159,6 +160,39 @@
 
     <!-- ===== Zona 3: arena clara ===== -->
     <div class="zone zone-light">
+    <!-- ===== Proyectos ===== -->
+    <section id="proyectos" class="section wrap">
+      <header class="section-head">
+        <h2 class="section-title">Proyectos</h2>
+        <p>Herramientas que construyo para medir y mejorar la infraestructura.</p>
+      </header>
+      <article class="project raised">
+        <figure class="project-shot inset">
+          <div class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+          <img src="img/proyecto-inspeccion.webp" width="1200" height="750" loading="lazy" decoding="async"
+               alt="Tablero de la aplicación de inspección: puntaje promedio, hallazgos críticos, puntaje por sede y madurez por área">
+        </figure>
+        <div class="project-body">
+          <p class="chip inset"><span class="led led-warm" aria-hidden="true"></span>Proyecto destacado</p>
+          <h3>Inspección de infraestructura de TI</h3>
+          <p>Aplicación web para inspeccionar sedes en tres frentes, física, técnica y Microsoft 365, con 49 puntos de control alineados con ISO/IEC 27001:2022. Calcula un puntaje por sede, prioriza los hallazgos críticos y deja registro de auditoría.</p>
+          <ul class="project-points">
+            <li>Tablero de madurez por sede, por área y con tendencia mensual.</li>
+            <li>Publicada en un VPS Linux con Docker, HTTPS automático y respaldos diarios.</li>
+            <li>Servidor endurecido: SSH solo con llave, firewall, fail2ban y parches automáticos.</li>
+          </ul>
+          <ul class="stack" aria-label="Tecnologías del proyecto">
+            <li>Node.js</li><li>Express</li><li>SQLite</li><li>Docker</li><li>Caddy</li><li>Ubuntu</li>
+          </ul>
+          <div class="actions">
+            <a class="pill pill-primary" href="https://github.com/LeonardoBasto/inspeccion-infra" target="_blank" rel="noopener">
+              <span class="pill-ico"><svg class="ico"><use href="#i-code"/></svg></span>Ver el proyecto
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+
     <section id="trayectoria" class="section wrap">
       <header class="section-head">
         <h2 class="section-title">Trayectoria</h2>
